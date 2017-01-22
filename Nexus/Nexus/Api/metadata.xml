@@ -1,0 +1,2209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="4.0" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+  <edmx:DataServices>
+    <Schema Namespace="Default" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+      <EntityContainer Name="Container">
+        <EntitySet Name="Nexus_AssociationsObject" EntityType="Intelex.Nexus_AssociationsObject">
+          <NavigationPropertyBinding Path="CreatedBy" Target="SysEmployeeEntity" />
+          <NavigationPropertyBinding Path="ModifiedBy" Target="SysEmployeeEntity" />
+          <NavigationPropertyBinding Path="Workflow" Target="SysWorkflowInstanceEntity" />
+          <NavigationPropertyBinding Path="SystemType" Target="SystemTypeEntity" />
+          <NavigationPropertyBinding Path="Members" Target="SysEmployeeEntity" />
+        </EntitySet>
+        <EntitySet Name="Nexus_ClubsObject" EntityType="Intelex.Nexus_ClubsObject">
+          <NavigationPropertyBinding Path="CreatedBy" Target="SysEmployeeEntity" />
+          <NavigationPropertyBinding Path="ModifiedBy" Target="SysEmployeeEntity" />
+          <NavigationPropertyBinding Path="Workflow" Target="SysWorkflowInstanceEntity" />
+          <NavigationPropertyBinding Path="SystemType" Target="SystemTypeEntity" />
+          <NavigationPropertyBinding Path="Members" Target="SysEmployeeEntity" />
+        </EntitySet>
+        <EntitySet Name="Nexus_SportTeamsObject" EntityType="Intelex.Nexus_SportTeamsObject">
+          <NavigationPropertyBinding Path="CreatedBy" Target="SysEmployeeEntity" />
+          <NavigationPropertyBinding Path="ModifiedBy" Target="SysEmployeeEntity" />
+          <NavigationPropertyBinding Path="Workflow" Target="SysWorkflowInstanceEntity" />
+          <NavigationPropertyBinding Path="SystemType" Target="SystemTypeEntity" />
+          <NavigationPropertyBinding Path="Members" Target="SysEmployeeEntity" />
+        </EntitySet>
+        <EntitySet Name="SysWorkflowInstanceEntity" EntityType="Intelex.SysWorkflowInstanceEntity">
+          <NavigationPropertyBinding Path="CreatedBy" Target="SysEmployeeEntity" />
+          <NavigationPropertyBinding Path="CurrentStage" Target="SysWorkflowStageEntity" />
+          <NavigationPropertyBinding Path="FinalView" Target="SysConfigurableViewEntity" />
+          <NavigationPropertyBinding Path="ModifiedBy" Target="SysEmployeeEntity" />
+          <NavigationPropertyBinding Path="PersonResponsible" Target="SysSubjectEntity" />
+          <NavigationPropertyBinding Path="RecurringSeries" Target="SysWorkflowRecurringSeriesEntity" />
+          <NavigationPropertyBinding Path="Status" Target="SysWorkflowStatusEntity" />
+          <NavigationPropertyBinding Path="WorkflowSchema" Target="SysWorkflowSchemaEntity" />
+          <NavigationPropertyBinding Path="ActionsRequiredCheckList" Target="SysWorkflowCheckListItemEntity" />
+          <NavigationPropertyBinding Path="Comments" Target="SysWorkflowCommentEntity" />
+          <NavigationPropertyBinding Path="Trackings" Target="SysWorkflowTrackingEntity" />
+        </EntitySet>
+        <EntitySet Name="DocDocumentAttachmentsEntity" EntityType="Intelex.DocDocumentAttachmentsEntity">
+          <NavigationPropertyBinding Path="Object" Target="MetObjectEntity" />
+        </EntitySet>
+        <EntitySet Name="SysLocationEntity" EntityType="Intelex.SysLocationEntity">
+          <NavigationPropertyBinding Path="Country" Target="SysCountryEntity" />
+          <NavigationPropertyBinding Path="CreatedBy" Target="SysEmployeeEntity" />
+          <NavigationPropertyBinding Path="ModifiedBy" Target="SysEmployeeEntity" />
+          <NavigationPropertyBinding Path="SystemType" Target="SystemTypeEntity" />
+          <NavigationPropertyBinding Path="ChildLocations" Target="SysLocationEntity" />
+          <NavigationPropertyBinding Path="ParentLocation" Target="SysLocationEntity" />
+          <NavigationPropertyBinding Path="FiscalYears" Target="SysLocationFiscalYearEntity" />
+          <NavigationPropertyBinding Path="LocationRoles" Target="SysLocationRoleEntity" />
+          <NavigationPropertyBinding Path="OverdueSetups" Target="NtfOverdueSetupEntity" />
+        </EntitySet>
+        <EntitySet Name="SystemTypeEntity" EntityType="Intelex.SystemTypeEntity" />
+        <EntitySet Name="SysSubjectEntity" EntityType="Intelex.SysSubjectEntity">
+          <NavigationPropertyBinding Path="CreatedBy" Target="SysEmployeeEntity" />
+          <NavigationPropertyBinding Path="ModifiedBy" Target="SysEmployeeEntity" />
+          <NavigationPropertyBinding Path="SystemType" Target="SystemTypeEntity" />
+          <NavigationPropertyBinding Path="MemberOf" Target="SysGroupEntity" />
+          <NavigationPropertyBinding Path="TestRelation" Target="App99483MM_Obj108492MMObject" />
+        </EntitySet>
+        <EntitySet Name="SysGroupEntity" EntityType="Intelex.SysGroupEntity">
+          <NavigationPropertyBinding Path="CreatedBy" Target="SysEmployeeEntity" />
+          <NavigationPropertyBinding Path="ModifiedBy" Target="SysEmployeeEntity" />
+          <NavigationPropertyBinding Path="SystemType" Target="SystemTypeEntity" />
+          <NavigationPropertyBinding Path="MemberOf" Target="SysGroupEntity" />
+          <NavigationPropertyBinding Path="TestRelation" Target="App99483MM_Obj108492MMObject" />
+          <NavigationPropertyBinding Path="Members" Target="SysSubjectEntity" />
+        </EntitySet>
+        <EntitySet Name="SysEscalationLevelEntity" EntityType="Intelex.SysEscalationLevelEntity">
+          <NavigationPropertyBinding Path="CreatedBy" Target="SysEmployeeEntity" />
+          <NavigationPropertyBinding Path="ModifiedBy" Target="SysEmployeeEntity" />
+          <NavigationPropertyBinding Path="SystemType" Target="SystemTypeEntity" />
+          <NavigationPropertyBinding Path="MemberOf" Target="SysGroupEntity" />
+          <NavigationPropertyBinding Path="TestRelation" Target="App99483MM_Obj108492MMObject" />
+        </EntitySet>
+        <EntitySet Name="SysEmployeeEntity" EntityType="Intelex.SysEmployeeEntity">
+          <NavigationPropertyBinding Path="CreatedBy" Target="SysEmployeeEntity" />
+          <NavigationPropertyBinding Path="ModifiedBy" Target="SysEmployeeEntity" />
+          <NavigationPropertyBinding Path="SystemType" Target="SystemTypeEntity" />
+          <NavigationPropertyBinding Path="MemberOf" Target="SysGroupEntity" />
+          <NavigationPropertyBinding Path="TestRelation" Target="App99483MM_Obj108492MMObject" />
+          <NavigationPropertyBinding Path="EmployeeType" Target="SysEmployeeTypeEntity" />
+          <NavigationPropertyBinding Path="Location" Target="SysLocationEntity" />
+          <NavigationPropertyBinding Path="Workflow" Target="SysWorkflowInstanceEntity" />
+          <NavigationPropertyBinding Path="SupervisorOf" Target="SysEmployeeEntity" />
+          <NavigationPropertyBinding Path="Supervisor" Target="SysEmployeeEntity" />
+        </EntitySet>
+        <EntitySet Name="SysSystemSubjectEntity" EntityType="Intelex.SysSystemSubjectEntity">
+          <NavigationPropertyBinding Path="CreatedBy" Target="SysEmployeeEntity" />
+          <NavigationPropertyBinding Path="ModifiedBy" Target="SysEmployeeEntity" />
+          <NavigationPropertyBinding Path="SystemType" Target="SystemTypeEntity" />
+          <NavigationPropertyBinding Path="MemberOf" Target="SysGroupEntity" />
+          <NavigationPropertyBinding Path="TestRelation" Target="App99483MM_Obj108492MMObject" />
+        </EntitySet>
+        <EntitySet Name="SysSecurityGroupEntity" EntityType="Intelex.SysSecurityGroupEntity">
+          <NavigationPropertyBinding Path="CreatedBy" Target="SysEmployeeEntity" />
+          <NavigationPropertyBinding Path="ModifiedBy" Target="SysEmployeeEntity" />
+          <NavigationPropertyBinding Path="SystemType" Target="SystemTypeEntity" />
+          <NavigationPropertyBinding Path="MemberOf" Target="SysGroupEntity" />
+          <NavigationPropertyBinding Path="TestRelation" Target="App99483MM_Obj108492MMObject" />
+          <NavigationPropertyBinding Path="Members" Target="SysSubjectEntity" />
+          <NavigationPropertyBinding Path="Application" Target="SysModuleEntity" />
+        </EntitySet>
+        <EntitySet Name="SysSystemGroupEntity" EntityType="Intelex.SysSystemGroupEntity">
+          <NavigationPropertyBinding Path="CreatedBy" Target="SysEmployeeEntity" />
+          <NavigationPropertyBinding Path="ModifiedBy" Target="SysEmployeeEntity" />
+          <NavigationPropertyBinding Path="SystemType" Target="SystemTypeEntity" />
+          <NavigationPropertyBinding Path="MemberOf" Target="SysGroupEntity" />
+          <NavigationPropertyBinding Path="TestRelation" Target="App99483MM_Obj108492MMObject" />
+          <NavigationPropertyBinding Path="Members" Target="SysSubjectEntity" />
+        </EntitySet>
+        <EntitySet Name="SysUserGroupEntity" EntityType="Intelex.SysUserGroupEntity">
+          <NavigationPropertyBinding Path="CreatedBy" Target="SysEmployeeEntity" />
+          <NavigationPropertyBinding Path="ModifiedBy" Target="SysEmployeeEntity" />
+          <NavigationPropertyBinding Path="SystemType" Target="SystemTypeEntity" />
+          <NavigationPropertyBinding Path="MemberOf" Target="SysGroupEntity" />
+          <NavigationPropertyBinding Path="TestRelation" Target="App99483MM_Obj108492MMObject" />
+          <NavigationPropertyBinding Path="Members" Target="SysSubjectEntity" />
+        </EntitySet>
+        <EntitySet Name="SysLocationRoleEntity" EntityType="Intelex.SysLocationRoleEntity">
+          <NavigationPropertyBinding Path="CreatedBy" Target="SysEmployeeEntity" />
+          <NavigationPropertyBinding Path="ModifiedBy" Target="SysEmployeeEntity" />
+          <NavigationPropertyBinding Path="SystemType" Target="SystemTypeEntity" />
+          <NavigationPropertyBinding Path="MemberOf" Target="SysGroupEntity" />
+          <NavigationPropertyBinding Path="TestRelation" Target="App99483MM_Obj108492MMObject" />
+          <NavigationPropertyBinding Path="Members" Target="SysSubjectEntity" />
+          <NavigationPropertyBinding Path="Location" Target="SysLocationEntity" />
+          <NavigationPropertyBinding Path="Role" Target="SysRoleEntity" />
+        </EntitySet>
+        <EntitySet Name="SysRoleEntity" EntityType="Intelex.SysRoleEntity">
+          <NavigationPropertyBinding Path="CreatedBy" Target="SysEmployeeEntity" />
+          <NavigationPropertyBinding Path="ModifiedBy" Target="SysEmployeeEntity" />
+          <NavigationPropertyBinding Path="SystemType" Target="SystemTypeEntity" />
+          <NavigationPropertyBinding Path="MemberOf" Target="SysGroupEntity" />
+          <NavigationPropertyBinding Path="TestRelation" Target="App99483MM_Obj108492MMObject" />
+          <NavigationPropertyBinding Path="Members" Target="SysSubjectEntity" />
+          <NavigationPropertyBinding Path="LocationRoles" Target="SysLocationRoleEntity" />
+        </EntitySet>
+        <EntitySet Name="SysWorkflowCheckListItemEntity" EntityType="Intelex.SysWorkflowCheckListItemEntity">
+          <NavigationPropertyBinding Path="Instance" Target="SysWorkflowInstanceEntity" />
+          <NavigationPropertyBinding Path="ActionRequired" Target="SysWorkflowActionRequiredEntity" />
+          <NavigationPropertyBinding Path="Stage" Target="SysWorkflowStageEntity" />
+        </EntitySet>
+        <EntitySet Name="SysWorkflowCommentEntity" EntityType="Intelex.SysWorkflowCommentEntity">
+          <NavigationPropertyBinding Path="WorkflowInstance" Target="SysWorkflowInstanceEntity" />
+          <NavigationPropertyBinding Path="CreatedBy" Target="SysEmployeeEntity" />
+          <NavigationPropertyBinding Path="ModifiedBy" Target="SysEmployeeEntity" />
+          <NavigationPropertyBinding Path="Stage" Target="SysWorkflowStageEntity" />
+          <NavigationPropertyBinding Path="Status" Target="SysWorkflowStatusEntity" />
+        </EntitySet>
+        <EntitySet Name="SysWorkflowStageEntity" EntityType="Intelex.SysWorkflowStageEntity">
+          <NavigationPropertyBinding Path="Comments" Target="SysWorkflowCommentEntity" />
+          <NavigationPropertyBinding Path="CreatedBy" Target="SysEmployeeEntity" />
+          <NavigationPropertyBinding Path="DueDateProperty" Target="MetPropertyEntity" />
+          <NavigationPropertyBinding Path="FinalStatus" Target="SysWorkflowStatusEntity" />
+          <NavigationPropertyBinding Path="ModifiedBy" Target="SysEmployeeEntity" />
+          <NavigationPropertyBinding Path="NamedRecipient" Target="SysEmployeeEntity" />
+          <NavigationPropertyBinding Path="RecipientProperty" Target="MetPropertyEntity" />
+          <NavigationPropertyBinding Path="RecipientRole" Target="SysRoleEntity" />
+          <NavigationPropertyBinding Path="Status" Target="SysWorkflowStatusEntity" />
+          <NavigationPropertyBinding Path="UpdateProperty" Target="MetPropertyEntity" />
+          <NavigationPropertyBinding Path="View" Target="SysConfigurableViewEntity" />
+          <NavigationPropertyBinding Path="WorkflowSchema" Target="SysWorkflowSchemaEntity" />
+          <NavigationPropertyBinding Path="WorkflowView" Target="SysWorkflowViewEntity" />
+          <NavigationPropertyBinding Path="Actions" Target="SysWorkflowStageActionEntity" />
+          <NavigationPropertyBinding Path="ActionsRequired" Target="SysWorkflowActionRequiredEntity" />
+          <NavigationPropertyBinding Path="NotificationSetupMaps" Target="NtfSetupScheduleStageMapEntity" />
+          <NavigationPropertyBinding Path="OverdueSchedules" Target="NtfOverdueSetupScheduleMapEntity" />
+        </EntitySet>
+        <EntitySet Name="SysConfigurableViewEntity" EntityType="Intelex.SysConfigurableViewEntity">
+          <NavigationPropertyBinding Path="CreatedBy" Target="SysEmployeeEntity" />
+          <NavigationPropertyBinding Path="ModifiedBy" Target="SysEmployeeEntity" />
+          <NavigationPropertyBinding Path="Object" Target="MetObjectEntity" />
+          <NavigationPropertyBinding Path="ComponentViews" Target="SysComponentViewEntity" />
+          <NavigationPropertyBinding Path="Nodes" Target="SysConfigurableViewNodeEntity" />
+          <NavigationPropertyBinding Path="Profiles" Target="SysConfigurableViewProfileEntity" />
+          <NavigationPropertyBinding Path="ViewHistory" Target="SysConfigurableViewHistoryEntity" />
+          <NavigationPropertyBinding Path="Walkthroughs" Target="SysConfigurableViewWalkthroughEntity" />
+          <NavigationPropertyBinding Path="WalkthroughSteps" Target="SysConfigurableViewWalkthroughStepEntity" />
+        </EntitySet>
+        <EntitySet Name="SysWorkflowRecurringSeriesEntity" EntityType="Intelex.SysWorkflowRecurringSeriesEntity">
+          <NavigationPropertyBinding Path="WorkflowInstances" Target="SysWorkflowInstanceEntity" />
+          <NavigationPropertyBinding Path="Object" Target="MetObjectEntity" />
+        </EntitySet>
+        <EntitySet Name="SysWorkflowStatusEntity" EntityType="Intelex.SysWorkflowStatusEntity">
+          <NavigationPropertyBinding Path="CreatedBy" Target="SysEmployeeEntity" />
+          <NavigationPropertyBinding Path="ModifiedBy" Target="SysEmployeeEntity" />
+          <NavigationPropertyBinding Path="WorkflowSchema" Target="SysWorkflowSchemaEntity" />
+        </EntitySet>
+        <EntitySet Name="SysWorkflowTrackingEntity" EntityType="Intelex.SysWorkflowTrackingEntity">
+          <NavigationPropertyBinding Path="WorkflowInstance" Target="SysWorkflowInstanceEntity" />
+          <NavigationPropertyBinding Path="Action" Target="SysWorkflowStageActionEntity" />
+          <NavigationPropertyBinding Path="CreatedBy" Target="SysEmployeeEntity" />
+          <NavigationPropertyBinding Path="ModifiedBy" Target="SysEmployeeEntity" />
+          <NavigationPropertyBinding Path="Stage" Target="SysWorkflowStageEntity" />
+        </EntitySet>
+        <EntitySet Name="SysWorkflowSchemaEntity" EntityType="Intelex.SysWorkflowSchemaEntity">
+          <NavigationPropertyBinding Path="Instances" Target="SysWorkflowInstanceEntity" />
+          <NavigationPropertyBinding Path="Stages" Target="SysWorkflowStageEntity" />
+          <NavigationPropertyBinding Path="Statuses" Target="SysWorkflowStatusEntity" />
+          <NavigationPropertyBinding Path="CreatedBy" Target="SysEmployeeEntity" />
+          <NavigationPropertyBinding Path="DateNotRequiredFinalStatus" Target="SysWorkflowStatusEntity" />
+          <NavigationPropertyBinding Path="DateNotRequiredFinalView" Target="SysConfigurableViewEntity" />
+          <NavigationPropertyBinding Path="DisableView" Target="SysConfigurableViewEntity" />
+          <NavigationPropertyBinding Path="ModifiedBy" Target="SysEmployeeEntity" />
+          <NavigationPropertyBinding Path="Object" Target="MetObjectEntity" />
+          <NavigationPropertyBinding Path="RecurringSettings" Target="SysWorkflowReccurenceSettingEntity" />
+          <NavigationPropertyBinding Path="StartNotification" Target="SysWorkflowStartNotificationEntity" />
+          <NavigationPropertyBinding Path="WorkflowDraft" Target="SysWorkflowDraftSchemaEntity" />
+        </EntitySet>
+        <EntitySet Name="MetTypeEntity" EntityType="Intelex.MetTypeEntity">
+          <NavigationPropertyBinding Path="ValueGenerator" Target="MetValueGeneratorEntity" />
+          <NavigationPropertyBinding Path="RelatedProperties" Target="MetPropertyEntity" />
+          <NavigationPropertyBinding Path="ValidationRules" Target="MetTypeValidationEntity" />
+          <NavigationPropertyBinding Path="ValueGanerators" Target="MetValueGeneratorEntity" />
+        </EntitySet>
+        <EntitySet Name="MetReferenceTypeEntity" EntityType="Intelex.MetReferenceTypeEntity">
+          <NavigationPropertyBinding Path="ValueGenerator" Target="MetValueGeneratorEntity" />
+          <NavigationPropertyBinding Path="RelatedProperties" Target="MetPropertyEntity" />
+          <NavigationPropertyBinding Path="ValidationRules" Target="MetTypeValidationEntity" />
+          <NavigationPropertyBinding Path="ValueGanerators" Target="MetValueGeneratorEntity" />
+          <NavigationPropertyBinding Path="Filter" Target="MetFilterEntity" />
+          <NavigationPropertyBinding Path="Object" Target="MetObjectEntity" />
+        </EntitySet>
+        <EntitySet Name="MetSimpleTypeEntity" EntityType="Intelex.MetSimpleTypeEntity">
+          <NavigationPropertyBinding Path="ValueGenerator" Target="MetValueGeneratorEntity" />
+          <NavigationPropertyBinding Path="RelatedProperties" Target="MetPropertyEntity" />
+          <NavigationPropertyBinding Path="ValidationRules" Target="MetTypeValidationEntity" />
+          <NavigationPropertyBinding Path="ValueGanerators" Target="MetValueGeneratorEntity" />
+        </EntitySet>
+        <EntitySet Name="MetObjectEntity" EntityType="Intelex.MetObjectEntity">
+          <NavigationPropertyBinding Path="ValueGenerator" Target="MetValueGeneratorEntity" />
+          <NavigationPropertyBinding Path="RelatedProperties" Target="MetPropertyEntity" />
+          <NavigationPropertyBinding Path="ValidationRules" Target="MetTypeValidationEntity" />
+          <NavigationPropertyBinding Path="ValueGanerators" Target="MetValueGeneratorEntity" />
+          <NavigationPropertyBinding Path="Views" Target="SysConfigurableViewEntity" />
+          <NavigationPropertyBinding Path="DefaultDetailView" Target="SysConfigurableViewEntity" />
+          <NavigationPropertyBinding Path="DefaultInventoryView" Target="SysConfigurableViewEntity" />
+          <NavigationPropertyBinding Path="DescriptionProperty" Target="MetPropertyEntity" />
+          <NavigationPropertyBinding Path="DisplayProperty" Target="MetPropertyEntity" />
+          <NavigationPropertyBinding Path="Group" Target="MetGroupEntity" />
+          <NavigationPropertyBinding Path="Module" Target="SysModuleEntity" />
+          <NavigationPropertyBinding Path="OrderProperty" Target="MetPropertyEntity" />
+          <NavigationPropertyBinding Path="Schema" Target="MetSchemaEntity" />
+          <NavigationPropertyBinding Path="ActionHandlers" Target="MetObjectActionEntity" />
+          <NavigationPropertyBinding Path="AuditSettings" Target="SysAuditSettingsEntity" />
+          <NavigationPropertyBinding Path="CustomInventories" Target="SysCustomInventoryEntity" />
+          <NavigationPropertyBinding Path="Datasets" Target="SysDatasetEntity" />
+          <NavigationPropertyBinding Path="Filters" Target="MetFilterEntity" />
+          <NavigationPropertyBinding Path="Links" Target="MetLinkEntity" />
+          <NavigationPropertyBinding Path="ObjectProperties" Target="MetPropertyEntity" />
+          <NavigationPropertyBinding Path="Permissions" Target="SecPermissionMaskElementEntity" />
+          <NavigationPropertyBinding Path="SubTypes" Target="MetObjectEntity" />
+          <NavigationPropertyBinding Path="SuperType" Target="MetObjectEntity" />
+        </EntitySet>
+        <EntitySet Name="MetHierarchyObjectEntity" EntityType="Intelex.MetHierarchyObjectEntity">
+          <NavigationPropertyBinding Path="ValueGenerator" Target="MetValueGeneratorEntity" />
+          <NavigationPropertyBinding Path="RelatedProperties" Target="MetPropertyEntity" />
+          <NavigationPropertyBinding Path="ValidationRules" Target="MetTypeValidationEntity" />
+          <NavigationPropertyBinding Path="ValueGanerators" Target="MetValueGeneratorEntity" />
+          <NavigationPropertyBinding Path="Views" Target="SysConfigurableViewEntity" />
+          <NavigationPropertyBinding Path="DefaultDetailView" Target="SysConfigurableViewEntity" />
+          <NavigationPropertyBinding Path="DefaultInventoryView" Target="SysConfigurableViewEntity" />
+          <NavigationPropertyBinding Path="DescriptionProperty" Target="MetPropertyEntity" />
+          <NavigationPropertyBinding Path="DisplayProperty" Target="MetPropertyEntity" />
+          <NavigationPropertyBinding Path="Group" Target="MetGroupEntity" />
+          <NavigationPropertyBinding Path="Module" Target="SysModuleEntity" />
+          <NavigationPropertyBinding Path="OrderProperty" Target="MetPropertyEntity" />
+          <NavigationPropertyBinding Path="Schema" Target="MetSchemaEntity" />
+          <NavigationPropertyBinding Path="ActionHandlers" Target="MetObjectActionEntity" />
+          <NavigationPropertyBinding Path="AuditSettings" Target="SysAuditSettingsEntity" />
+          <NavigationPropertyBinding Path="CustomInventories" Target="SysCustomInventoryEntity" />
+          <NavigationPropertyBinding Path="Datasets" Target="SysDatasetEntity" />
+          <NavigationPropertyBinding Path="Filters" Target="MetFilterEntity" />
+          <NavigationPropertyBinding Path="Links" Target="MetLinkEntity" />
+          <NavigationPropertyBinding Path="ObjectProperties" Target="MetPropertyEntity" />
+          <NavigationPropertyBinding Path="Permissions" Target="SecPermissionMaskElementEntity" />
+          <NavigationPropertyBinding Path="SubTypes" Target="MetObjectEntity" />
+          <NavigationPropertyBinding Path="SuperType" Target="MetObjectEntity" />
+          <NavigationPropertyBinding Path="SelfReferenceProperty" Target="MetReferencePropertyEntity" />
+        </EntitySet>
+        <EntitySet Name="MetLookupObjectEntity" EntityType="Intelex.MetLookupObjectEntity">
+          <NavigationPropertyBinding Path="ValueGenerator" Target="MetValueGeneratorEntity" />
+          <NavigationPropertyBinding Path="RelatedProperties" Target="MetPropertyEntity" />
+          <NavigationPropertyBinding Path="ValidationRules" Target="MetTypeValidationEntity" />
+          <NavigationPropertyBinding Path="ValueGanerators" Target="MetValueGeneratorEntity" />
+          <NavigationPropertyBinding Path="Views" Target="SysConfigurableViewEntity" />
+          <NavigationPropertyBinding Path="DefaultDetailView" Target="SysConfigurableViewEntity" />
+          <NavigationPropertyBinding Path="DefaultInventoryView" Target="SysConfigurableViewEntity" />
+          <NavigationPropertyBinding Path="DescriptionProperty" Target="MetPropertyEntity" />
+          <NavigationPropertyBinding Path="DisplayProperty" Target="MetPropertyEntity" />
+          <NavigationPropertyBinding Path="Group" Target="MetGroupEntity" />
+          <NavigationPropertyBinding Path="Module" Target="SysModuleEntity" />
+          <NavigationPropertyBinding Path="OrderProperty" Target="MetPropertyEntity" />
+          <NavigationPropertyBinding Path="Schema" Target="MetSchemaEntity" />
+          <NavigationPropertyBinding Path="ActionHandlers" Target="MetObjectActionEntity" />
+          <NavigationPropertyBinding Path="AuditSettings" Target="SysAuditSettingsEntity" />
+          <NavigationPropertyBinding Path="CustomInventories" Target="SysCustomInventoryEntity" />
+          <NavigationPropertyBinding Path="Datasets" Target="SysDatasetEntity" />
+          <NavigationPropertyBinding Path="Filters" Target="MetFilterEntity" />
+          <NavigationPropertyBinding Path="Links" Target="MetLinkEntity" />
+          <NavigationPropertyBinding Path="ObjectProperties" Target="MetPropertyEntity" />
+          <NavigationPropertyBinding Path="Permissions" Target="SecPermissionMaskElementEntity" />
+          <NavigationPropertyBinding Path="SubTypes" Target="MetObjectEntity" />
+          <NavigationPropertyBinding Path="SuperType" Target="MetObjectEntity" />
+        </EntitySet>
+        <EntitySet Name="SysCountryEntity" EntityType="Intelex.SysCountryEntity">
+          <NavigationPropertyBinding Path="Locations" Target="SysLocationEntity" />
+          <NavigationPropertyBinding Path="SystemType" Target="SystemTypeEntity" />
+        </EntitySet>
+        <EntitySet Name="SysLocationFiscalYearEntity" EntityType="Intelex.SysLocationFiscalYearEntity">
+          <NavigationPropertyBinding Path="Location" Target="SysLocationEntity" />
+          <NavigationPropertyBinding Path="CreatedBy" Target="SysEmployeeEntity" />
+          <NavigationPropertyBinding Path="ModifiedBy" Target="SysEmployeeEntity" />
+        </EntitySet>
+        <EntitySet Name="NtfOverdueSetupEntity" EntityType="Intelex.NtfOverdueSetupEntity">
+          <NavigationPropertyBinding Path="Location" Target="SysLocationEntity" />
+          <NavigationPropertyBinding Path="DefaultSchedule" Target="NtfScheduleEntity" />
+          <NavigationPropertyBinding Path="SetupScheduleMaps" Target="NtfOverdueSetupScheduleMapEntity" />
+        </EntitySet>
+        <EntitySet Name="SysEmployeeTypeEntity" EntityType="Intelex.SysEmployeeTypeEntity">
+          <NavigationPropertyBinding Path="Employees" Target="SysEmployeeEntity" />
+        </EntitySet>
+        <EntitySet Name="App99483MM_Obj108492MMObject" EntityType="Intelex.App99483MM_Obj108492MMObject">
+          <NavigationPropertyBinding Path="CreatedBy" Target="SysEmployeeEntity" />
+          <NavigationPropertyBinding Path="ModifiedBy" Target="SysEmployeeEntity" />
+          <NavigationPropertyBinding Path="Workflow" Target="SysWorkflowInstanceEntity" />
+          <NavigationPropertyBinding Path="SystemType" Target="SystemTypeEntity" />
+        </EntitySet>
+        <EntitySet Name="SysWorkflowActionRequiredEntity" EntityType="Intelex.SysWorkflowActionRequiredEntity">
+          <NavigationPropertyBinding Path="ActionRequired" Target="SysWorkflowCheckListItemEntity" />
+          <NavigationPropertyBinding Path="Stage" Target="SysWorkflowStageEntity" />
+          <NavigationPropertyBinding Path="Property" Target="MetPropertyEntity" />
+        </EntitySet>
+        <EntitySet Name="SysWorkflowStageActionEntity" EntityType="Intelex.SysWorkflowStageActionEntity">
+          <NavigationPropertyBinding Path="Stage" Target="SysWorkflowStageEntity" />
+          <NavigationPropertyBinding Path="CreatedBy" Target="SysEmployeeEntity" />
+          <NavigationPropertyBinding Path="ModifiedBy" Target="SysEmployeeEntity" />
+          <NavigationPropertyBinding Path="Permission" Target="SecPermissionEntity" />
+        </EntitySet>
+        <EntitySet Name="MetPropertyEntity" EntityType="Intelex.MetPropertyEntity">
+          <NavigationPropertyBinding Path="Type" Target="MetTypeEntity" />
+          <NavigationPropertyBinding Path="Object" Target="MetObjectEntity" />
+          <NavigationPropertyBinding Path="EditPermission" Target="SecPermissionEntity" />
+          <NavigationPropertyBinding Path="ValueGenerator" Target="MetValueGeneratorEntity" />
+          <NavigationPropertyBinding Path="ViewPermission" Target="SecPermissionEntity" />
+          <NavigationPropertyBinding Path="CalculationDependencies" Target="MetCalculationDependencyEntity" />
+          <NavigationPropertyBinding Path="DefaultUnitOfMeasureValueProperties" Target="MetSimplePropertyEntity" />
+          <NavigationPropertyBinding Path="ValidationRules" Target="MetPropertyValidationEntity" />
+        </EntitySet>
+        <EntitySet Name="MetSimplePropertyEntity" EntityType="Intelex.MetSimplePropertyEntity">
+          <NavigationPropertyBinding Path="Type" Target="MetTypeEntity" />
+          <NavigationPropertyBinding Path="Object" Target="MetObjectEntity" />
+          <NavigationPropertyBinding Path="EditPermission" Target="SecPermissionEntity" />
+          <NavigationPropertyBinding Path="ValueGenerator" Target="MetValueGeneratorEntity" />
+          <NavigationPropertyBinding Path="ViewPermission" Target="SecPermissionEntity" />
+          <NavigationPropertyBinding Path="CalculationDependencies" Target="MetCalculationDependencyEntity" />
+          <NavigationPropertyBinding Path="DefaultUnitOfMeasureValueProperties" Target="MetSimplePropertyEntity" />
+          <NavigationPropertyBinding Path="ValidationRules" Target="MetPropertyValidationEntity" />
+          <NavigationPropertyBinding Path="DefaultUnitOfMeasureValueProperty" Target="MetPropertyEntity" />
+          <NavigationPropertyBinding Path="DefaultUnitOfMeasure" Target="UomUnitOfMeasureEntity" />
+          <NavigationPropertyBinding Path="UnitOfMeasureProperty" Target="MetPropertyEntity" />
+        </EntitySet>
+        <EntitySet Name="MetReferencePropertyEntity" EntityType="Intelex.MetReferencePropertyEntity">
+          <NavigationPropertyBinding Path="Type" Target="MetTypeEntity" />
+          <NavigationPropertyBinding Path="Object" Target="MetObjectEntity" />
+          <NavigationPropertyBinding Path="EditPermission" Target="SecPermissionEntity" />
+          <NavigationPropertyBinding Path="ValueGenerator" Target="MetValueGeneratorEntity" />
+          <NavigationPropertyBinding Path="ViewPermission" Target="SecPermissionEntity" />
+          <NavigationPropertyBinding Path="CalculationDependencies" Target="MetCalculationDependencyEntity" />
+          <NavigationPropertyBinding Path="DefaultUnitOfMeasureValueProperties" Target="MetSimplePropertyEntity" />
+          <NavigationPropertyBinding Path="ValidationRules" Target="MetPropertyValidationEntity" />
+          <NavigationPropertyBinding Path="Filter" Target="MetFilterEntity" />
+          <NavigationPropertyBinding Path="ConfigurableView" Target="SysConfigurableViewEntity" />
+          <NavigationPropertyBinding Path="DisplayProperty" Target="MetPropertyEntity" />
+          <NavigationPropertyBinding Path="Relation" Target="MetRelationEntity" />
+        </EntitySet>
+        <EntitySet Name="NtfSetupScheduleStageMapEntity" EntityType="Intelex.NtfSetupScheduleStageMapEntity">
+          <NavigationPropertyBinding Path="WorkflowStage" Target="SysWorkflowStageEntity" />
+          <NavigationPropertyBinding Path="OverdueSetupScheduleMapId_" Target="NtfOverdueSetupScheduleMapEntity" />
+        </EntitySet>
+        <EntitySet Name="NtfOverdueSetupScheduleMapEntity" EntityType="Intelex.NtfOverdueSetupScheduleMapEntity">
+          <NavigationPropertyBinding Path="WorkflowStages" Target="SysWorkflowStageEntity" />
+          <NavigationPropertyBinding Path="OverdueSetup" Target="NtfOverdueSetupEntity" />
+          <NavigationPropertyBinding Path="ScheduleStageMaps" Target="NtfSetupScheduleStageMapEntity" />
+          <NavigationPropertyBinding Path="Schedule" Target="NtfScheduleEntity" />
+        </EntitySet>
+        <EntitySet Name="SysWorkflowViewEntity" EntityType="Intelex.SysWorkflowViewEntity">
+          <NavigationPropertyBinding Path="StagesUsingView" Target="SysWorkflowStageEntity" />
+          <NavigationPropertyBinding Path="ViewProperties" Target="SysWorkflowViewPropertyEntity" />
+        </EntitySet>
+        <EntitySet Name="SysComponentViewEntity" EntityType="Intelex.SysComponentViewEntity">
+          <NavigationPropertyBinding Path="ParentView" Target="SysConfigurableViewEntity" />
+        </EntitySet>
+        <EntitySet Name="SysConfigurableViewNodeEntity" EntityType="Intelex.SysConfigurableViewNodeEntity">
+          <NavigationPropertyBinding Path="ConfigurableView" Target="SysConfigurableViewEntity" />
+          <NavigationPropertyBinding Path="Attributes" Target="SysConfigurableViewNodeAttributeEntity" />
+          <NavigationPropertyBinding Path="ChildNodes" Target="SysConfigurableViewNodeEntity" />
+          <NavigationPropertyBinding Path="ParentNode" Target="SysConfigurableViewNodeEntity" />
+        </EntitySet>
+        <EntitySet Name="SysConfigurableViewProfileEntity" EntityType="Intelex.SysConfigurableViewProfileEntity">
+          <NavigationPropertyBinding Path="ConfigurableView" Target="SysConfigurableViewEntity" />
+          <NavigationPropertyBinding Path="CreatedBy" Target="SysEmployeeEntity" />
+          <NavigationPropertyBinding Path="ModifiedBy" Target="SysEmployeeEntity" />
+        </EntitySet>
+        <EntitySet Name="SysConfigurableViewHistoryEntity" EntityType="Intelex.SysConfigurableViewHistoryEntity">
+          <NavigationPropertyBinding Path="View" Target="SysConfigurableViewEntity" />
+          <NavigationPropertyBinding Path="CreatedBy" Target="SysEmployeeEntity" />
+          <NavigationPropertyBinding Path="ModifiedBy" Target="SysEmployeeEntity" />
+          <NavigationPropertyBinding Path="Profiles" Target="SysConfigurableViewHistoryProfileEntity" />
+        </EntitySet>
+        <EntitySet Name="SysWalkthroughEntity" EntityType="Intelex.SysWalkthroughEntity">
+          <NavigationPropertyBinding Path="WalkthroughSteps" Target="SysWalkthroughStepEntity" />
+        </EntitySet>
+        <EntitySet Name="SysStaticViewWalkthroughEntity" EntityType="Intelex.SysStaticViewWalkthroughEntity">
+          <NavigationPropertyBinding Path="WalkthroughSteps" Target="SysWalkthroughStepEntity" />
+        </EntitySet>
+        <EntitySet Name="SysConfigurableViewWalkthroughEntity" EntityType="Intelex.SysConfigurableViewWalkthroughEntity">
+          <NavigationPropertyBinding Path="WalkthroughSteps" Target="SysWalkthroughStepEntity" />
+          <NavigationPropertyBinding Path="ConfigurableView" Target="SysConfigurableViewEntity" />
+        </EntitySet>
+        <EntitySet Name="SysWalkthroughStepEntity" EntityType="Intelex.SysWalkthroughStepEntity">
+          <NavigationPropertyBinding Path="Walkthrough" Target="SysWalkthroughEntity" />
+        </EntitySet>
+        <EntitySet Name="SysConfigurableViewWalkthroughStepEntity" EntityType="Intelex.SysConfigurableViewWalkthroughStepEntity">
+          <NavigationPropertyBinding Path="Walkthrough" Target="SysWalkthroughEntity" />
+          <NavigationPropertyBinding Path="ConfigurableView" Target="SysConfigurableViewEntity" />
+        </EntitySet>
+        <EntitySet Name="SysStaticViewWalkthroughStepEntity" EntityType="Intelex.SysStaticViewWalkthroughStepEntity">
+          <NavigationPropertyBinding Path="Walkthrough" Target="SysWalkthroughEntity" />
+        </EntitySet>
+        <EntitySet Name="SysWorkflowReccurenceSettingEntity" EntityType="Intelex.SysWorkflowReccurenceSettingEntity">
+          <NavigationPropertyBinding Path="PublishedSchemas" Target="SysWorkflowSchemaEntity" />
+          <NavigationPropertyBinding Path="DraftSchemas" Target="SysWorkflowDraftSchemaEntity" />
+        </EntitySet>
+        <EntitySet Name="SysWorkflowStartNotificationEntity" EntityType="Intelex.SysWorkflowStartNotificationEntity">
+          <NavigationPropertyBinding Path="Template" Target="NtfTemplateEntity" />
+          <NavigationPropertyBinding Path="Subjects" Target="SysWorkflowNotificationSubjectEntity" />
+        </EntitySet>
+        <EntitySet Name="SysWorkflowDraftSchemaEntity" EntityType="Intelex.SysWorkflowDraftSchemaEntity">
+          <NavigationPropertyBinding Path="PublishedWorkflows" Target="SysWorkflowSchemaEntity" />
+          <NavigationPropertyBinding Path="RecurrenceSettings" Target="SysWorkflowReccurenceSettingEntity" />
+          <NavigationPropertyBinding Path="CreatedBy" Target="SysEmployeeEntity" />
+          <NavigationPropertyBinding Path="DateNotRequiredFinalStatus" Target="SysWorkflowDraftStatusEntity" />
+          <NavigationPropertyBinding Path="DateNotRequiredFinalView" Target="SysConfigurableViewEntity" />
+          <NavigationPropertyBinding Path="DisableView" Target="SysConfigurableViewEntity" />
+          <NavigationPropertyBinding Path="FirstStage" Target="SysWorkflowDraftStageEntity" />
+          <NavigationPropertyBinding Path="ModifiedBy" Target="SysEmployeeEntity" />
+          <NavigationPropertyBinding Path="Object" Target="MetObjectEntity" />
+          <NavigationPropertyBinding Path="StartNotification" Target="SysWorkflowStartNotificationEntity" />
+          <NavigationPropertyBinding Path="Resources" Target="SysWorkflowResourceKeyEntity" />
+          <NavigationPropertyBinding Path="Stages" Target="SysWorkflowDraftStageEntity" />
+          <NavigationPropertyBinding Path="Statuses" Target="SysWorkflowDraftStatusEntity" />
+        </EntitySet>
+        <EntitySet Name="MetObjectActionEntity" EntityType="Intelex.MetObjectActionEntity">
+          <NavigationPropertyBinding Path="Object" Target="MetObjectEntity" />
+        </EntitySet>
+        <EntitySet Name="SysAuditSettingsEntity" EntityType="Intelex.SysAuditSettingsEntity">
+          <NavigationPropertyBinding Path="Object" Target="MetObjectEntity" />
+          <NavigationPropertyBinding Path="Permission" Target="SecPermissionEntity" />
+          <NavigationPropertyBinding Path="Subject" Target="SysSubjectEntity" />
+        </EntitySet>
+        <EntitySet Name="SysCustomInventoryEntity" EntityType="Intelex.SysCustomInventoryEntity">
+          <NavigationPropertyBinding Path="Object" Target="MetObjectEntity" />
+          <NavigationPropertyBinding Path="CreatedBy" Target="SysEmployeeEntity" />
+          <NavigationPropertyBinding Path="InventoryBase" Target="SysInventoryBaseEntity" />
+          <NavigationPropertyBinding Path="InventoryView" Target="SysInventoryViewEntity" />
+          <NavigationPropertyBinding Path="ModifiedBy" Target="SysEmployeeEntity" />
+          <NavigationPropertyBinding Path="ViewFilter" Target="SysViewFilterEntity" />
+        </EntitySet>
+        <EntitySet Name="SysDatasetEntity" EntityType="Intelex.SysDatasetEntity">
+          <NavigationPropertyBinding Path="Objects" Target="MetObjectEntity" />
+          <NavigationPropertyBinding Path="DatasetId__" Target="SysDatasetRelationEntity" />
+          <NavigationPropertyBinding Path="ObjectToDatasets" Target="SysObjectToDatasetMapEntity" />
+          <NavigationPropertyBinding Path="RelatedDsId_" Target="SysDatasetRelationEntity" />
+        </EntitySet>
+        <EntitySet Name="MetFilterEntity" EntityType="Intelex.MetFilterEntity">
+          <NavigationPropertyBinding Path="Object" Target="MetObjectEntity" />
+          <NavigationPropertyBinding Path="ReferenceProperties" Target="MetReferencePropertyEntity" />
+        </EntitySet>
+        <EntitySet Name="MetGroupEntity" EntityType="Intelex.MetGroupEntity">
+          <NavigationPropertyBinding Path="Objects" Target="MetObjectEntity" />
+        </EntitySet>
+        <EntitySet Name="MetLinkEntity" EntityType="Intelex.MetLinkEntity">
+          <NavigationPropertyBinding Path="Object" Target="MetObjectEntity" />
+          <NavigationPropertyBinding Path="LinkObject" Target="MetObjectEntity" />
+          <NavigationPropertyBinding Path="Module" Target="SysModuleEntity" />
+          <NavigationPropertyBinding Path="Permission" Target="SecPermissionEntity" />
+        </EntitySet>
+        <EntitySet Name="SysModuleEntity" EntityType="Intelex.SysModuleEntity">
+          <NavigationPropertyBinding Path="SecurityGroups" Target="SysSecurityGroupEntity" />
+          <NavigationPropertyBinding Path="Objects" Target="MetObjectEntity" />
+          <NavigationPropertyBinding Path="CreatedBy" Target="SysEmployeeEntity" />
+          <NavigationPropertyBinding Path="Group" Target="SysModuleGroupEntity" />
+          <NavigationPropertyBinding Path="ModifiedBy" Target="SysEmployeeEntity" />
+          <NavigationPropertyBinding Path="SelectedModuleTab" Target="SysModuleTabEntity" />
+          <NavigationPropertyBinding Path="Tabs" Target="SysModuleTabEntity" />
+        </EntitySet>
+        <EntitySet Name="SecPermissionMaskElementEntity" EntityType="Intelex.SecPermissionMaskElementEntity">
+          <NavigationPropertyBinding Path="Object" Target="MetObjectEntity" />
+          <NavigationPropertyBinding Path="IncludedIn" Target="SecPermissionMaskEntity" />
+        </EntitySet>
+        <EntitySet Name="SecPermissionMaskEntity" EntityType="Intelex.SecPermissionMaskEntity">
+          <NavigationPropertyBinding Path="Object" Target="MetObjectEntity" />
+          <NavigationPropertyBinding Path="IncludedIn" Target="SecPermissionMaskEntity" />
+          <NavigationPropertyBinding Path="Permissions" Target="SecPermissionMaskElementEntity" />
+        </EntitySet>
+        <EntitySet Name="SecPermissionEntity" EntityType="Intelex.SecPermissionEntity">
+          <NavigationPropertyBinding Path="Object" Target="MetObjectEntity" />
+          <NavigationPropertyBinding Path="IncludedIn" Target="SecPermissionMaskEntity" />
+          <NavigationPropertyBinding Path="AuditSettings" Target="SysAuditSettingsEntity" />
+        </EntitySet>
+        <EntitySet Name="SecSystemPermissionMaskEntity" EntityType="Intelex.SecSystemPermissionMaskEntity">
+          <NavigationPropertyBinding Path="Object" Target="MetObjectEntity" />
+          <NavigationPropertyBinding Path="IncludedIn" Target="SecPermissionMaskEntity" />
+          <NavigationPropertyBinding Path="Permissions" Target="SecPermissionMaskElementEntity" />
+        </EntitySet>
+        <EntitySet Name="SecRightEntity" EntityType="Intelex.SecRightEntity">
+          <NavigationPropertyBinding Path="Object" Target="MetObjectEntity" />
+          <NavigationPropertyBinding Path="IncludedIn" Target="SecPermissionMaskEntity" />
+          <NavigationPropertyBinding Path="Permissions" Target="SecPermissionMaskElementEntity" />
+        </EntitySet>
+        <EntitySet Name="MetSchemaEntity" EntityType="Intelex.MetSchemaEntity">
+          <NavigationPropertyBinding Path="Objects" Target="MetObjectEntity" />
+        </EntitySet>
+        <EntitySet Name="MetTypeValidationEntity" EntityType="Intelex.MetTypeValidationEntity">
+          <NavigationPropertyBinding Path="Type" Target="MetTypeEntity" />
+        </EntitySet>
+        <EntitySet Name="MetValueGeneratorEntity" EntityType="Intelex.MetValueGeneratorEntity">
+          <NavigationPropertyBinding Path="Type" Target="MetTypeEntity" />
+        </EntitySet>
+        <EntitySet Name="NtfScheduleEntity" EntityType="Intelex.NtfScheduleEntity">
+          <NavigationPropertyBinding Path="DefaultScheduleId_" Target="NtfOverdueSetupEntity" />
+          <NavigationPropertyBinding Path="OverdueSetupMaps" Target="NtfOverdueSetupScheduleMapEntity" />
+          <NavigationPropertyBinding Path="CreatedBy" Target="SysEmployeeEntity" />
+          <NavigationPropertyBinding Path="ModifiedBy" Target="SysEmployeeEntity" />
+          <NavigationPropertyBinding Path="Object" Target="MetObjectEntity" />
+          <NavigationPropertyBinding Path="Recipients" Target="NtfScheduleRecipientEntity" />
+        </EntitySet>
+        <EntitySet Name="MetCalculationDependencyEntity" EntityType="Intelex.MetCalculationDependencyEntity">
+          <NavigationPropertyBinding Path="StartProperty" Target="MetPropertyEntity" />
+          <NavigationPropertyBinding Path="EndProperty" Target="MetPropertyEntity" />
+        </EntitySet>
+        <EntitySet Name="MetPropertyValidationEntity" EntityType="Intelex.MetPropertyValidationEntity">
+          <NavigationPropertyBinding Path="Property" Target="MetPropertyEntity" />
+        </EntitySet>
+        <EntitySet Name="SysWorkflowViewPropertyEntity" EntityType="Intelex.SysWorkflowViewPropertyEntity">
+          <NavigationPropertyBinding Path="WorkflowView" Target="SysWorkflowViewEntity" />
+          <NavigationPropertyBinding Path="Object" Target="MetObjectEntity" />
+          <NavigationPropertyBinding Path="Property" Target="MetPropertyEntity" />
+        </EntitySet>
+        <EntitySet Name="SysConfigurableViewNodeAttributeEntity" EntityType="Intelex.SysConfigurableViewNodeAttributeEntity">
+          <NavigationPropertyBinding Path="Node" Target="SysConfigurableViewNodeEntity" />
+        </EntitySet>
+        <EntitySet Name="SysConfigurableViewHistoryProfileEntity" EntityType="Intelex.SysConfigurableViewHistoryProfileEntity">
+          <NavigationPropertyBinding Path="ConfigurableViewHistory" Target="SysConfigurableViewHistoryEntity" />
+        </EntitySet>
+        <EntitySet Name="SysWorkflowNotificationSubjectEntity" EntityType="Intelex.SysWorkflowNotificationSubjectEntity">
+          <NavigationPropertyBinding Path="StartNofication" Target="SysWorkflowStartNotificationEntity" />
+          <NavigationPropertyBinding Path="Subject" Target="SysSubjectEntity" />
+        </EntitySet>
+        <EntitySet Name="NtfTemplateEntity" EntityType="Intelex.NtfTemplateEntity">
+          <NavigationPropertyBinding Path="CreatedBy" Target="SysEmployeeEntity" />
+          <NavigationPropertyBinding Path="ModifiedBy" Target="SysEmployeeEntity" />
+          <NavigationPropertyBinding Path="Object" Target="MetObjectEntity" />
+        </EntitySet>
+        <EntitySet Name="SysWorkflowDraftStatusEntity" EntityType="Intelex.SysWorkflowDraftStatusEntity">
+          <NavigationPropertyBinding Path="WorkflowDraftSchema" Target="SysWorkflowDraftSchemaEntity" />
+          <NavigationPropertyBinding Path="CreatedBy" Target="SysEmployeeEntity" />
+          <NavigationPropertyBinding Path="ModifiedBy" Target="SysEmployeeEntity" />
+        </EntitySet>
+        <EntitySet Name="SysWorkflowDraftStageEntity" EntityType="Intelex.SysWorkflowDraftStageEntity">
+          <NavigationPropertyBinding Path="WorkflowDraftSchema" Target="SysWorkflowDraftSchemaEntity" />
+          <NavigationPropertyBinding Path="CreatedBy" Target="SysEmployeeEntity" />
+          <NavigationPropertyBinding Path="DueDateProperty" Target="MetPropertyEntity" />
+          <NavigationPropertyBinding Path="FinalStatus" Target="SysWorkflowDraftStatusEntity" />
+          <NavigationPropertyBinding Path="ModifiedBy" Target="SysEmployeeEntity" />
+          <NavigationPropertyBinding Path="NamedRecipient" Target="SysEmployeeEntity" />
+          <NavigationPropertyBinding Path="RecipientProperty" Target="MetPropertyEntity" />
+          <NavigationPropertyBinding Path="RecipientRole" Target="SysRoleEntity" />
+          <NavigationPropertyBinding Path="Status" Target="SysWorkflowDraftStatusEntity" />
+          <NavigationPropertyBinding Path="UpdateProperty" Target="MetPropertyEntity" />
+          <NavigationPropertyBinding Path="View" Target="SysConfigurableViewEntity" />
+          <NavigationPropertyBinding Path="WorkflowView" Target="SysWorkflowViewEntity" />
+        </EntitySet>
+        <EntitySet Name="SysResourceKeyEntity" EntityType="Intelex.SysResourceKeyEntity" />
+        <EntitySet Name="SysWorkflowResourceKeyEntity" EntityType="Intelex.SysWorkflowResourceKeyEntity">
+          <NavigationPropertyBinding Path="WorkflowDraftSchema" Target="SysWorkflowDraftSchemaEntity" />
+        </EntitySet>
+        <EntitySet Name="SysInventoryBaseEntity" EntityType="Intelex.SysInventoryBaseEntity">
+          <NavigationPropertyBinding Path="CustomInventories" Target="SysCustomInventoryEntity" />
+          <NavigationPropertyBinding Path="InventoryViews" Target="SysInventoryViewEntity" />
+          <NavigationPropertyBinding Path="ViewFilters" Target="SysViewFilterEntity" />
+        </EntitySet>
+        <EntitySet Name="SysInventoryViewEntity" EntityType="Intelex.SysInventoryViewEntity">
+          <NavigationPropertyBinding Path="InventoryView" Target="SysCustomInventoryEntity" />
+          <NavigationPropertyBinding Path="InventoryBase" Target="SysInventoryBaseEntity" />
+          <NavigationPropertyBinding Path="CreatedBy" Target="SysEmployeeEntity" />
+          <NavigationPropertyBinding Path="ModifiedBy" Target="SysEmployeeEntity" />
+          <NavigationPropertyBinding Path="Object" Target="MetObjectEntity" />
+        </EntitySet>
+        <EntitySet Name="SysViewFilterEntity" EntityType="Intelex.SysViewFilterEntity">
+          <NavigationPropertyBinding Path="CustomInventories" Target="SysCustomInventoryEntity" />
+          <NavigationPropertyBinding Path="InventoryBase" Target="SysInventoryBaseEntity" />
+          <NavigationPropertyBinding Path="CreatedBy" Target="SysEmployeeEntity" />
+          <NavigationPropertyBinding Path="ModifiedBy" Target="SysEmployeeEntity" />
+          <NavigationPropertyBinding Path="Object" Target="MetObjectEntity" />
+          <NavigationPropertyBinding Path="DependentProperties" Target="MetPropertyEntity" />
+        </EntitySet>
+        <EntitySet Name="SysDatasetRelationEntity" EntityType="Intelex.SysDatasetRelationEntity">
+          <NavigationPropertyBinding Path="DatasetId_" Target="SysDatasetEntity" />
+          <NavigationPropertyBinding Path="RelatedDsId_" Target="SysDatasetEntity" />
+        </EntitySet>
+        <EntitySet Name="SysObjectToDatasetMapEntity" EntityType="Intelex.SysObjectToDatasetMapEntity">
+          <NavigationPropertyBinding Path="Dataset" Target="SysDatasetEntity" />
+          <NavigationPropertyBinding Path="Object" Target="MetObjectEntity" />
+        </EntitySet>
+        <EntitySet Name="SysModuleGroupEntity" EntityType="Intelex.SysModuleGroupEntity">
+          <NavigationPropertyBinding Path="Modules" Target="SysModuleEntity" />
+          <NavigationPropertyBinding Path="CreatedBy" Target="SysEmployeeEntity" />
+          <NavigationPropertyBinding Path="ModifiedBy" Target="SysEmployeeEntity" />
+        </EntitySet>
+        <EntitySet Name="SysModuleTabEntity" EntityType="Intelex.SysModuleTabEntity">
+          <NavigationPropertyBinding Path="Module" Target="SysModuleEntity" />
+          <NavigationPropertyBinding Path="CreatedBy" Target="SysEmployeeEntity" />
+          <NavigationPropertyBinding Path="ModifiedBy" Target="SysEmployeeEntity" />
+        </EntitySet>
+        <EntitySet Name="SysModuleTabDashboardEntity" EntityType="Intelex.SysModuleTabDashboardEntity">
+          <NavigationPropertyBinding Path="Module" Target="SysModuleEntity" />
+          <NavigationPropertyBinding Path="CreatedBy" Target="SysEmployeeEntity" />
+          <NavigationPropertyBinding Path="ModifiedBy" Target="SysEmployeeEntity" />
+        </EntitySet>
+        <EntitySet Name="SysModuleTabLegacyEntity" EntityType="Intelex.SysModuleTabLegacyEntity">
+          <NavigationPropertyBinding Path="Module" Target="SysModuleEntity" />
+          <NavigationPropertyBinding Path="CreatedBy" Target="SysEmployeeEntity" />
+          <NavigationPropertyBinding Path="ModifiedBy" Target="SysEmployeeEntity" />
+        </EntitySet>
+        <EntitySet Name="SysModuleTabAutogeneratedViewEntity" EntityType="Intelex.SysModuleTabAutogeneratedViewEntity">
+          <NavigationPropertyBinding Path="Module" Target="SysModuleEntity" />
+          <NavigationPropertyBinding Path="CreatedBy" Target="SysEmployeeEntity" />
+          <NavigationPropertyBinding Path="ModifiedBy" Target="SysEmployeeEntity" />
+          <NavigationPropertyBinding Path="Object" Target="MetObjectEntity" />
+        </EntitySet>
+        <EntitySet Name="SysModuleTabConfigurableViewEntity" EntityType="Intelex.SysModuleTabConfigurableViewEntity">
+          <NavigationPropertyBinding Path="Module" Target="SysModuleEntity" />
+          <NavigationPropertyBinding Path="CreatedBy" Target="SysEmployeeEntity" />
+          <NavigationPropertyBinding Path="ModifiedBy" Target="SysEmployeeEntity" />
+          <NavigationPropertyBinding Path="ConfigurableView" Target="SysConfigurableViewEntity" />
+        </EntitySet>
+        <EntitySet Name="SysModuleTabReportEntity" EntityType="Intelex.SysModuleTabReportEntity">
+          <NavigationPropertyBinding Path="Module" Target="SysModuleEntity" />
+          <NavigationPropertyBinding Path="CreatedBy" Target="SysEmployeeEntity" />
+          <NavigationPropertyBinding Path="ModifiedBy" Target="SysEmployeeEntity" />
+        </EntitySet>
+        <EntitySet Name="SysModuleTabLinkEntity" EntityType="Intelex.SysModuleTabLinkEntity">
+          <NavigationPropertyBinding Path="Module" Target="SysModuleEntity" />
+          <NavigationPropertyBinding Path="CreatedBy" Target="SysEmployeeEntity" />
+          <NavigationPropertyBinding Path="ModifiedBy" Target="SysEmployeeEntity" />
+        </EntitySet>
+        <EntitySet Name="NtfScheduleRecipientEntity" EntityType="Intelex.NtfScheduleRecipientEntity">
+          <NavigationPropertyBinding Path="Schedule" Target="NtfScheduleEntity" />
+          <NavigationPropertyBinding Path="CreatedBy" Target="SysEmployeeEntity" />
+          <NavigationPropertyBinding Path="ModifiedBy" Target="SysEmployeeEntity" />
+          <NavigationPropertyBinding Path="Template" Target="NtfTemplateEntity" />
+          <NavigationPropertyBinding Path="Recipients" Target="SysSubjectEntity" />
+        </EntitySet>
+        <EntitySet Name="MetRelationEntity" EntityType="Intelex.MetRelationEntity">
+          <NavigationPropertyBinding Path="ReferenceProperties" Target="MetReferencePropertyEntity" />
+          <NavigationPropertyBinding Path="EndObject" Target="MetObjectEntity" />
+          <NavigationPropertyBinding Path="StartObject" Target="MetObjectEntity" />
+        </EntitySet>
+        <EntitySet Name="UomUnitOfMeasureEntity" EntityType="Intelex.UomUnitOfMeasureEntity">
+          <NavigationPropertyBinding Path="PropertiesUsingUnit" Target="MetSimplePropertyEntity" />
+        </EntitySet>
+      </EntityContainer>
+    </Schema>
+    <Schema Namespace="Intelex" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+      <EntityType Name="Nexus_AssociationsObject" Abstract="true">
+        <Key>
+          <PropertyRef Name="Id" />
+        </Key>
+        <Property Name="Id" Type="Edm.Guid" Nullable="false" />
+        <Property Name="DateCreated" Type="Edm.DateTimeOffset" />
+        <Property Name="DateModified" Type="Edm.DateTimeOffset" />
+        <Property Name="Description" Type="Edm.String" />
+        <Property Name="Name" Type="Edm.String" />
+        <NavigationProperty Name="CreatedBy" Type="Intelex.SysEmployeeEntity" Nullable="false" />
+        <NavigationProperty Name="ModifiedBy" Type="Intelex.SysEmployeeEntity" Nullable="false" />
+        <NavigationProperty Name="Workflow" Type="Intelex.SysWorkflowInstanceEntity" Nullable="false" />
+        <NavigationProperty Name="SystemType" Type="Intelex.SystemTypeEntity" Nullable="false" />
+        <NavigationProperty Name="Members" Type="Collection(Intelex.SysEmployeeEntity)" />
+      </EntityType>
+      <EntityType Name="SysWorkflowInstanceEntity">
+        <Key>
+          <PropertyRef Name="Id" />
+        </Key>
+        <Property Name="Id" Type="Edm.Guid" Nullable="false" />
+        <Property Name="DateCreated" Type="Edm.DateTimeOffset" />
+        <Property Name="DateModified" Type="Edm.DateTimeOffset" />
+        <Property Name="DateNotRequired" Type="Edm.DateTimeOffset" />
+        <Property Name="DueDate" Type="Edm.DateTimeOffset" />
+        <Property Name="DueDateType" Type="Enum.DueDateType" />
+        <Property Name="EntityId" Type="Edm.Guid" />
+        <Property Name="EntityName" Type="Edm.String" />
+        <Property Name="IsVirtual" Type="Edm.Boolean" />
+        <Property Name="LocationId" Type="Edm.Guid" />
+        <Property Name="ObjectId" Type="Edm.Guid" />
+        <Property Name="WorkflowStatus" Type="Enum.WorkflowStatusType" />
+        <NavigationProperty Name="CreatedBy" Type="Intelex.SysEmployeeEntity" Nullable="false" />
+        <NavigationProperty Name="CurrentStage" Type="Intelex.SysWorkflowStageEntity" Nullable="false" />
+        <NavigationProperty Name="FinalView" Type="Intelex.SysConfigurableViewEntity" Nullable="false" />
+        <NavigationProperty Name="ModifiedBy" Type="Intelex.SysEmployeeEntity" Nullable="false" />
+        <NavigationProperty Name="PersonResponsible" Type="Intelex.SysSubjectEntity" Nullable="false" />
+        <NavigationProperty Name="RecurringSeries" Type="Intelex.SysWorkflowRecurringSeriesEntity" Nullable="false" Partner="WorkflowInstances" />
+        <NavigationProperty Name="Status" Type="Intelex.SysWorkflowStatusEntity" Nullable="false" />
+        <NavigationProperty Name="WorkflowSchema" Type="Intelex.SysWorkflowSchemaEntity" Nullable="false" Partner="Instances" />
+        <NavigationProperty Name="ActionsRequiredCheckList" Type="Collection(Intelex.SysWorkflowCheckListItemEntity)" Partner="Instance" />
+        <NavigationProperty Name="Comments" Type="Collection(Intelex.SysWorkflowCommentEntity)" Partner="WorkflowInstance" />
+        <NavigationProperty Name="Trackings" Type="Collection(Intelex.SysWorkflowTrackingEntity)" Partner="WorkflowInstance" />
+      </EntityType>
+      <EntityType Name="DocDocumentAttachmentsEntity" HasStream="true">
+        <Key>
+          <PropertyRef Name="Id" />
+        </Key>
+        <Property Name="Id" Type="Edm.Guid" Nullable="false" />
+        <Property Name="DateCreated" Type="Edm.DateTimeOffset" />
+        <Property Name="AttachmentName" Type="Edm.String" />
+        <Property Name="Bytes" Type="Edm.Decimal" />
+        <Property Name="IsDraft" Type="Edm.Boolean" />
+        <Property Name="ObjectRecordId" Type="Edm.Guid" />
+        <Property Name="Type" Type="Enum.DocumentAttachmentType" />
+        <Property Name="Uri" Type="Edm.String" />
+        <Property Name="Attachment" Type="Edm.Stream" />
+        <NavigationProperty Name="Object" Type="Intelex.MetObjectEntity" Nullable="false" />
+      </EntityType>
+      <EntityType Name="SysLocationEntity">
+        <Key>
+          <PropertyRef Name="Id" />
+        </Key>
+        <Property Name="Id" Type="Edm.Guid" Nullable="false" />
+        <Property Name="DateCreated" Type="Edm.DateTimeOffset" />
+        <Property Name="DateModified" Type="Edm.DateTimeOffset" />
+        <Property Name="Address1" Type="Edm.String" />
+        <Property Name="Address2" Type="Edm.String" />
+        <Property Name="Area" Type="Edm.String" />
+        <Property Name="City" Type="Edm.String" />
+        <Property Name="County" Type="Edm.String" />
+        <Property Name="Description" Type="Edm.String" />
+        <Property Name="District" Type="Edm.String" />
+        <Property Name="Fax" Type="Edm.String" />
+        <Property Name="License" Type="Edm.String" />
+        <Property Name="LocationCode" Type="Edm.String" />
+        <Property Name="Name" Type="Edm.String" />
+        <Property Name="Path" Type="Edm.String" />
+        <Property Name="Phone" Type="Edm.String" />
+        <Property Name="PostalCode" Type="Edm.String" />
+        <Property Name="State" Type="Edm.String" />
+        <Property Name="UserLicenseCode" Type="Edm.String" />
+        <NavigationProperty Name="Country" Type="Intelex.SysCountryEntity" Nullable="false" Partner="Locations" />
+        <NavigationProperty Name="CreatedBy" Type="Intelex.SysEmployeeEntity" Nullable="false" />
+        <NavigationProperty Name="ModifiedBy" Type="Intelex.SysEmployeeEntity" Nullable="false" />
+        <NavigationProperty Name="SystemType" Type="Intelex.SystemTypeEntity" Nullable="false" />
+        <NavigationProperty Name="ChildLocations" Type="Collection(Intelex.SysLocationEntity)" Partner="ParentLocation" />
+        <NavigationProperty Name="ParentLocation" Type="Intelex.SysLocationEntity" Nullable="false" Partner="ChildLocations" />
+        <NavigationProperty Name="FiscalYears" Type="Collection(Intelex.SysLocationFiscalYearEntity)" Partner="Location" />
+        <NavigationProperty Name="LocationRoles" Type="Collection(Intelex.SysLocationRoleEntity)" Partner="Location" />
+        <NavigationProperty Name="OverdueSetups" Type="Collection(Intelex.NtfOverdueSetupEntity)" Partner="Location" />
+      </EntityType>
+      <EntityType Name="SystemTypeEntity">
+        <Key>
+          <PropertyRef Name="Id" />
+        </Key>
+        <Property Name="Id" Type="Edm.Guid" />
+        <Property Name="Name" Type="Edm.String" />
+      </EntityType>
+      <EntityType Name="Nexus_ClubsObject" BaseType="Intelex.Nexus_AssociationsObject" />
+      <EntityType Name="Nexus_SportTeamsObject" BaseType="Intelex.Nexus_AssociationsObject" />
+      <EntityType Name="SysSubjectEntity">
+        <Key>
+          <PropertyRef Name="Id" />
+        </Key>
+        <Property Name="Id" Type="Edm.Guid" Nullable="false" />
+        <Property Name="DateCreated" Type="Edm.DateTimeOffset" />
+        <Property Name="DateModified" Type="Edm.DateTimeOffset" />
+        <Property Name="IsSystem" Type="Edm.Boolean" />
+        <Property Name="Name" Type="Edm.String" />
+        <NavigationProperty Name="CreatedBy" Type="Intelex.SysEmployeeEntity" Nullable="false" />
+        <NavigationProperty Name="ModifiedBy" Type="Intelex.SysEmployeeEntity" Nullable="false" />
+        <NavigationProperty Name="SystemType" Type="Intelex.SystemTypeEntity" Nullable="false" />
+        <NavigationProperty Name="MemberOf" Type="Collection(Intelex.SysGroupEntity)" Partner="Members" />
+        <NavigationProperty Name="TestRelation" Type="Collection(Intelex.App99483MM_Obj108492MMObject)" />
+      </EntityType>
+      <EntityType Name="SysEmployeeEntity" BaseType="Intelex.SysSubjectEntity">
+        <Property Name="City" Type="Edm.String" />
+        <Property Name="Company" Type="Edm.String" />
+        <Property Name="ComputeProperty" Type="Edm.String" />
+        <Property Name="ContractExpiry" Type="Edm.DateTimeOffset" />
+        <Property Name="ContractorName" Type="Edm.String" />
+        <Property Name="ContractorNotes" Type="Edm.String" />
+        <Property Name="DateHired" Type="Edm.DateTimeOffset" />
+        <Property Name="DateOfBirth" Type="Edm.DateTimeOffset" />
+        <Property Name="Email" Type="Edm.String" />
+        <Property Name="EmergencyContact" Type="Edm.String" />
+        <Property Name="EmergencyPhone" Type="Edm.String" />
+        <Property Name="FirstName" Type="Edm.String" />
+        <Property Name="FullName" Type="Edm.String" />
+        <Property Name="Gender" Type="Edm.String" />
+        <Property Name="HomeAddress" Type="Edm.String" />
+        <Property Name="HourlyWage" Type="Edm.String" />
+        <Property Name="InsuranceExpiry" Type="Edm.DateTimeOffset" />
+        <Property Name="IsContracted" Type="Edm.Boolean" />
+        <Property Name="IsSupervisor" Type="Edm.Boolean" />
+        <Property Name="IsSystemEmployee" Type="Edm.Boolean" />
+        <Property Name="JobCode" Type="Edm.String" />
+        <Property Name="LastName" Type="Edm.String" />
+        <Property Name="MiddleName" Type="Edm.String" />
+        <Property Name="Notes" Type="Edm.String" />
+        <Property Name="Number" Type="Edm.String" />
+        <Property Name="Phone" Type="Edm.String" />
+        <Property Name="Position" Type="Edm.String" />
+        <Property Name="Prefix" Type="Edm.String" />
+        <Property Name="Responsibility" Type="Edm.String" />
+        <Property Name="SocialSecurity" Type="Edm.String" />
+        <Property Name="State" Type="Edm.String" />
+        <Property Name="Suffix" Type="Edm.String" />
+        <Property Name="WorkStatus" Type="Edm.String" />
+        <Property Name="ZipCode" Type="Edm.String" />
+        <NavigationProperty Name="EmployeeType" Type="Intelex.SysEmployeeTypeEntity" Nullable="false" Partner="Employees" />
+        <NavigationProperty Name="Location" Type="Intelex.SysLocationEntity" Nullable="false" />
+        <NavigationProperty Name="Workflow" Type="Intelex.SysWorkflowInstanceEntity" Nullable="false" />
+        <NavigationProperty Name="SupervisorOf" Type="Collection(Intelex.SysEmployeeEntity)" Partner="Supervisor" />
+        <NavigationProperty Name="Supervisor" Type="Intelex.SysEmployeeEntity" Nullable="false" Partner="SupervisorOf" />
+      </EntityType>
+      <EntityType Name="SysWorkflowCheckListItemEntity">
+        <Key>
+          <PropertyRef Name="Id" />
+        </Key>
+        <Property Name="Id" Type="Edm.Guid" Nullable="false" />
+        <Property Name="CompletionDate" Type="Edm.DateTimeOffset" />
+        <Property Name="IsCompleted" Type="Edm.Boolean" />
+        <NavigationProperty Name="Instance" Type="Intelex.SysWorkflowInstanceEntity" Nullable="false" Partner="ActionsRequiredCheckList" />
+        <NavigationProperty Name="ActionRequired" Type="Intelex.SysWorkflowActionRequiredEntity" Nullable="false" Partner="ActionRequired" />
+        <NavigationProperty Name="Stage" Type="Intelex.SysWorkflowStageEntity" Nullable="false" />
+      </EntityType>
+      <EntityType Name="SysWorkflowCommentEntity">
+        <Key>
+          <PropertyRef Name="Id" />
+        </Key>
+        <Property Name="Id" Type="Edm.Guid" Nullable="false" />
+        <Property Name="DateCreated" Type="Edm.DateTimeOffset" />
+        <Property Name="DateModified" Type="Edm.DateTimeOffset" />
+        <Property Name="Message" Type="Edm.String" />
+        <Property Name="WorkflowStatus" Type="Enum.WorkflowStatusType" />
+        <NavigationProperty Name="WorkflowInstance" Type="Intelex.SysWorkflowInstanceEntity" Nullable="false" Partner="Comments" />
+        <NavigationProperty Name="CreatedBy" Type="Intelex.SysEmployeeEntity" Nullable="false" />
+        <NavigationProperty Name="ModifiedBy" Type="Intelex.SysEmployeeEntity" Nullable="false" />
+        <NavigationProperty Name="Stage" Type="Intelex.SysWorkflowStageEntity" Nullable="false" Partner="Comments" />
+        <NavigationProperty Name="Status" Type="Intelex.SysWorkflowStatusEntity" Nullable="false" />
+      </EntityType>
+      <EntityType Name="SysWorkflowStageEntity">
+        <Key>
+          <PropertyRef Name="Id" />
+        </Key>
+        <Property Name="Id" Type="Edm.Guid" Nullable="false" />
+        <Property Name="DateCreated" Type="Edm.DateTimeOffset" />
+        <Property Name="DateModified" Type="Edm.DateTimeOffset" />
+        <Property Name="Description" Type="Edm.String" />
+        <Property Name="DueDateExpression" Type="Edm.String" />
+        <Property Name="DueDateLengthType" Type="Enum.DueDateLengthType" />
+        <Property Name="DueDateLengthValue" Type="Edm.Int32" />
+        <Property Name="InheritedPermission" Type="Edm.Boolean" />
+        <Property Name="IsFirstStage" Type="Edm.Boolean" />
+        <Property Name="IsStandardPermission" Type="Edm.Boolean" />
+        <Property Name="Name" Type="Edm.String" />
+        <Property Name="RecipientExpression" Type="Edm.String" />
+        <Property Name="RecipientType" Type="Enum.RecipientType" />
+        <Property Name="StageAction" Type="Enum.StageActionType" />
+        <Property Name="StayInEditMode" Type="Edm.Boolean" />
+        <Property Name="SystemName" Type="Edm.String" />
+        <Property Name="TaskType" Type="Enum.TaskType" />
+        <NavigationProperty Name="Comments" Type="Collection(Intelex.SysWorkflowCommentEntity)" Partner="Stage" />
+        <NavigationProperty Name="CreatedBy" Type="Intelex.SysEmployeeEntity" Nullable="false" />
+        <NavigationProperty Name="DueDateProperty" Type="Intelex.MetPropertyEntity" Nullable="false" />
+        <NavigationProperty Name="FinalStatus" Type="Intelex.SysWorkflowStatusEntity" Nullable="false" />
+        <NavigationProperty Name="ModifiedBy" Type="Intelex.SysEmployeeEntity" Nullable="false" />
+        <NavigationProperty Name="NamedRecipient" Type="Intelex.SysEmployeeEntity" Nullable="false" />
+        <NavigationProperty Name="RecipientProperty" Type="Intelex.MetPropertyEntity" Nullable="false" />
+        <NavigationProperty Name="RecipientRole" Type="Intelex.SysRoleEntity" Nullable="false" />
+        <NavigationProperty Name="Status" Type="Intelex.SysWorkflowStatusEntity" Nullable="false" />
+        <NavigationProperty Name="UpdateProperty" Type="Intelex.MetPropertyEntity" Nullable="false" />
+        <NavigationProperty Name="View" Type="Intelex.SysConfigurableViewEntity" Nullable="false" />
+        <NavigationProperty Name="WorkflowSchema" Type="Intelex.SysWorkflowSchemaEntity" Nullable="false" Partner="Stages" />
+        <NavigationProperty Name="WorkflowView" Type="Intelex.SysWorkflowViewEntity" Nullable="false" Partner="StagesUsingView" />
+        <NavigationProperty Name="Actions" Type="Collection(Intelex.SysWorkflowStageActionEntity)" Partner="Stage" />
+        <NavigationProperty Name="ActionsRequired" Type="Collection(Intelex.SysWorkflowActionRequiredEntity)" Partner="Stage" />
+        <NavigationProperty Name="NotificationSetupMaps" Type="Collection(Intelex.NtfSetupScheduleStageMapEntity)" Partner="WorkflowStage" />
+        <NavigationProperty Name="OverdueSchedules" Type="Collection(Intelex.NtfOverdueSetupScheduleMapEntity)" Partner="WorkflowStages" />
+      </EntityType>
+      <EntityType Name="SysConfigurableViewEntity">
+        <Key>
+          <PropertyRef Name="Id" />
+        </Key>
+        <Property Name="Id" Type="Edm.Guid" Nullable="false" />
+        <Property Name="DateCreated" Type="Edm.DateTimeOffset" />
+        <Property Name="DateModified" Type="Edm.DateTimeOffset" />
+        <Property Name="Caption" Type="Edm.String" />
+        <Property Name="ConfigurableViewActions" Type="Edm.String" />
+        <Property Name="Content" Type="Edm.String" />
+        <Property Name="IsParsedForMobile" Type="Edm.Boolean" />
+        <Property Name="IsPublic" Type="Edm.Boolean" />
+        <Property Name="MasterPage" Type="Edm.String" />
+        <Property Name="Name" Type="Edm.String" />
+        <Property Name="Path" Type="Edm.String" />
+        <Property Name="SerializedDataDefinition" Type="Edm.Binary" />
+        <Property Name="Source" Type="Edm.String" />
+        <Property Name="Type" Type="Enum.ViewType" />
+        <NavigationProperty Name="CreatedBy" Type="Intelex.SysEmployeeEntity" Nullable="false" />
+        <NavigationProperty Name="ModifiedBy" Type="Intelex.SysEmployeeEntity" Nullable="false" />
+        <NavigationProperty Name="Object" Type="Intelex.MetObjectEntity" Nullable="false" Partner="Views" />
+        <NavigationProperty Name="ComponentViews" Type="Collection(Intelex.SysComponentViewEntity)" Partner="ParentView" />
+        <NavigationProperty Name="Nodes" Type="Collection(Intelex.SysConfigurableViewNodeEntity)" Partner="ConfigurableView" />
+        <NavigationProperty Name="Profiles" Type="Collection(Intelex.SysConfigurableViewProfileEntity)" Partner="ConfigurableView" />
+        <NavigationProperty Name="ViewHistory" Type="Collection(Intelex.SysConfigurableViewHistoryEntity)" Partner="View" />
+        <NavigationProperty Name="Walkthroughs" Type="Collection(Intelex.SysConfigurableViewWalkthroughEntity)" Partner="ConfigurableView" />
+        <NavigationProperty Name="WalkthroughSteps" Type="Collection(Intelex.SysConfigurableViewWalkthroughStepEntity)" Partner="ConfigurableView" />
+      </EntityType>
+      <EntityType Name="SysWorkflowRecurringSeriesEntity">
+        <Key>
+          <PropertyRef Name="Id" />
+        </Key>
+        <Property Name="Id" Type="Edm.Guid" Nullable="false" />
+        <Property Name="DateCompleted" Type="Edm.DateTimeOffset" />
+        <Property Name="EndDate" Type="Edm.DateTimeOffset" />
+        <Property Name="EntityId" Type="Edm.Guid" />
+        <Property Name="Frequency" Type="Edm.String" />
+        <Property Name="GracePeriod" Type="Edm.Int32" />
+        <Property Name="IsActive" Type="Edm.Boolean" />
+        <Property Name="NextScheduledDate" Type="Edm.DateTimeOffset" />
+        <Property Name="OriginalStartDate" Type="Edm.DateTimeOffset" />
+        <Property Name="StartDate" Type="Edm.DateTimeOffset" />
+        <NavigationProperty Name="WorkflowInstances" Type="Collection(Intelex.SysWorkflowInstanceEntity)" Partner="RecurringSeries" />
+        <NavigationProperty Name="Object" Type="Intelex.MetObjectEntity" Nullable="false" />
+      </EntityType>
+      <EntityType Name="SysWorkflowStatusEntity">
+        <Key>
+          <PropertyRef Name="Id" />
+        </Key>
+        <Property Name="Id" Type="Edm.Guid" Nullable="false" />
+        <Property Name="DateCreated" Type="Edm.DateTimeOffset" />
+        <Property Name="DateModified" Type="Edm.DateTimeOffset" />
+        <Property Name="Description" Type="Edm.String" />
+        <Property Name="Name" Type="Edm.String" />
+        <NavigationProperty Name="CreatedBy" Type="Intelex.SysEmployeeEntity" Nullable="false" />
+        <NavigationProperty Name="ModifiedBy" Type="Intelex.SysEmployeeEntity" Nullable="false" />
+        <NavigationProperty Name="WorkflowSchema" Type="Intelex.SysWorkflowSchemaEntity" Nullable="false" Partner="Statuses" />
+      </EntityType>
+      <EntityType Name="SysWorkflowTrackingEntity">
+        <Key>
+          <PropertyRef Name="Id" />
+        </Key>
+        <Property Name="Id" Type="Edm.Guid" Nullable="false" />
+        <Property Name="DateCreated" Type="Edm.DateTimeOffset" />
+        <Property Name="DateModified" Type="Edm.DateTimeOffset" />
+        <Property Name="Message" Type="Edm.String" />
+        <Property Name="TrackingType" Type="Enum.WorkflowTrackingType" />
+        <NavigationProperty Name="WorkflowInstance" Type="Intelex.SysWorkflowInstanceEntity" Nullable="false" Partner="Trackings" />
+        <NavigationProperty Name="Action" Type="Intelex.SysWorkflowStageActionEntity" Nullable="false" />
+        <NavigationProperty Name="CreatedBy" Type="Intelex.SysEmployeeEntity" Nullable="false" />
+        <NavigationProperty Name="ModifiedBy" Type="Intelex.SysEmployeeEntity" Nullable="false" />
+        <NavigationProperty Name="Stage" Type="Intelex.SysWorkflowStageEntity" Nullable="false" />
+      </EntityType>
+      <EntityType Name="SysWorkflowSchemaEntity">
+        <Key>
+          <PropertyRef Name="Id" />
+        </Key>
+        <Property Name="Id" Type="Edm.Guid" Nullable="false" />
+        <Property Name="DateCreated" Type="Edm.DateTimeOffset" />
+        <Property Name="DateModified" Type="Edm.DateTimeOffset" />
+        <Property Name="Comment" Type="Edm.String" />
+        <Property Name="Description" Type="Edm.String" />
+        <Property Name="DisableCondition" Type="Edm.String" />
+        <Property Name="EnableActionsOnCreate" Type="Edm.Boolean" />
+        <Property Name="EnableActionsOnEdit" Type="Edm.Boolean" />
+        <Property Name="IsActive" Type="Edm.Boolean" />
+        <Property Name="IsCommentsEnable" Type="Edm.Boolean" />
+        <Property Name="IsDateNotRequiredEnabled" Type="Edm.Boolean" />
+        <Property Name="IsDeleted" Type="Edm.Boolean" />
+        <Property Name="IsRecurring" Type="Edm.Boolean" />
+        <Property Name="Name" Type="Edm.String" />
+        <Property Name="Recurrence" Type="Edm.String" />
+        <Property Name="StartCondition" Type="Edm.String" />
+        <NavigationProperty Name="Instances" Type="Collection(Intelex.SysWorkflowInstanceEntity)" Partner="WorkflowSchema" />
+        <NavigationProperty Name="Stages" Type="Collection(Intelex.SysWorkflowStageEntity)" Partner="WorkflowSchema" />
+        <NavigationProperty Name="Statuses" Type="Collection(Intelex.SysWorkflowStatusEntity)" Partner="WorkflowSchema" />
+        <NavigationProperty Name="CreatedBy" Type="Intelex.SysEmployeeEntity" Nullable="false" />
+        <NavigationProperty Name="DateNotRequiredFinalStatus" Type="Intelex.SysWorkflowStatusEntity" Nullable="false" />
+        <NavigationProperty Name="DateNotRequiredFinalView" Type="Intelex.SysConfigurableViewEntity" Nullable="false" />
+        <NavigationProperty Name="DisableView" Type="Intelex.SysConfigurableViewEntity" Nullable="false" />
+        <NavigationProperty Name="ModifiedBy" Type="Intelex.SysEmployeeEntity" Nullable="false" />
+        <NavigationProperty Name="Object" Type="Intelex.MetObjectEntity" Nullable="false" />
+        <NavigationProperty Name="RecurringSettings" Type="Intelex.SysWorkflowReccurenceSettingEntity" Nullable="false" Partner="PublishedSchemas" />
+        <NavigationProperty Name="StartNotification" Type="Intelex.SysWorkflowStartNotificationEntity" Nullable="false" />
+        <NavigationProperty Name="WorkflowDraft" Type="Intelex.SysWorkflowDraftSchemaEntity" Nullable="false" Partner="PublishedWorkflows" />
+      </EntityType>
+      <EntityType Name="MetTypeEntity" Abstract="true">
+        <Key>
+          <PropertyRef Name="Id" />
+        </Key>
+        <Property Name="Id" Type="Edm.Guid" Nullable="false" />
+        <Property Name="DateCreated" Type="Edm.DateTimeOffset" />
+        <Property Name="DateModified" Type="Edm.DateTimeOffset" />
+        <Property Name="Caption" Type="Edm.String" />
+        <Property Name="DefaultValue" Type="Edm.String" />
+        <Property Name="Description" Type="Edm.String" />
+        <Property Name="DetailDisplayAs" Type="Enum.DetailDisplayField" />
+        <Property Name="DetailEditAs" Type="Enum.DetailDisplayField" />
+        <Property Name="DetailEmptyText" Type="Edm.String" />
+        <Property Name="Icon" Type="Edm.String" />
+        <Property Name="InventoryDisplayAs" Type="Enum.InventoryDisplayField" />
+        <Property Name="InventoryEditAs" Type="Enum.InventoryDisplayField" />
+        <Property Name="InventoryEmptyText" Type="Edm.String" />
+        <Property Name="IsStatic" Type="Edm.Boolean" />
+        <Property Name="IsSystem" Type="Edm.Boolean" />
+        <Property Name="Name" Type="Edm.String" />
+        <Property Name="NetType" Type="Edm.String" />
+        <Property Name="UseSystemViewSettings" Type="Edm.Boolean" />
+        <NavigationProperty Name="ValueGenerator" Type="Intelex.MetValueGeneratorEntity" Nullable="false" />
+        <NavigationProperty Name="RelatedProperties" Type="Collection(Intelex.MetPropertyEntity)" Partner="Type" />
+        <NavigationProperty Name="ValidationRules" Type="Collection(Intelex.MetTypeValidationEntity)" Partner="Type" />
+        <NavigationProperty Name="ValueGanerators" Type="Collection(Intelex.MetValueGeneratorEntity)" Partner="Type" />
+      </EntityType>
+      <EntityType Name="MetObjectEntity" BaseType="Intelex.MetTypeEntity">
+        <Property Name="CheckChanges" Type="Edm.Boolean" />
+        <Property Name="ConcurrencyType" Type="Enum.ConcurrencyType" />
+        <Property Name="HasWorkflow" Type="Edm.Boolean" />
+        <Property Name="IsAbstract" Type="Edm.Boolean" />
+        <Property Name="IsAttachmentEnabled" Type="Edm.Boolean" />
+        <Property Name="IsAuditEnabled" Type="Edm.Boolean" />
+        <Property Name="IsCreationFromMyTaskEnabled" Type="Edm.Boolean" />
+        <Property Name="IsDataImportEnabled" Type="Edm.Boolean" />
+        <Property Name="IsDocumentEnabled" Type="Edm.Boolean" />
+        <Property Name="IsLocalizable" Type="Edm.Boolean" />
+        <Property Name="IsLocationBound" Type="Edm.Boolean" />
+        <Property Name="IsMailMergeEnabled" Type="Edm.Boolean" />
+        <Property Name="IsMapEnabled" Type="Edm.Boolean" />
+        <Property Name="IsMessageEnabled" Type="Edm.Boolean" />
+        <Property Name="IsSecurityEnabled" Type="Edm.Boolean" />
+        <Property Name="LocationFilter" Type="Enum.LocationFilterType" />
+        <Property Name="MergeType" Type="Enum.MergeType" />
+        <Property Name="MobileFilter" Type="Edm.String" />
+        <Property Name="MobileTabOrder" Type="Edm.Int32" />
+        <Property Name="ShortName" Type="Edm.String" />
+        <Property Name="TableName" Type="Edm.String" />
+        <Property Name="Timeout" Type="Edm.Int32" />
+        <Property Name="TimeoutType" Type="Enum.TimeoutType" />
+        <Property Name="UseSoftDelete" Type="Edm.Boolean" />
+        <NavigationProperty Name="Views" Type="Collection(Intelex.SysConfigurableViewEntity)" Partner="Object" />
+        <NavigationProperty Name="DefaultDetailView" Type="Intelex.SysConfigurableViewEntity" Nullable="false" />
+        <NavigationProperty Name="DefaultInventoryView" Type="Intelex.SysConfigurableViewEntity" Nullable="false" />
+        <NavigationProperty Name="DescriptionProperty" Type="Intelex.MetPropertyEntity" Nullable="false" />
+        <NavigationProperty Name="DisplayProperty" Type="Intelex.MetPropertyEntity" Nullable="false" />
+        <NavigationProperty Name="Group" Type="Intelex.MetGroupEntity" Nullable="false" Partner="Objects" />
+        <NavigationProperty Name="Module" Type="Intelex.SysModuleEntity" Nullable="false" Partner="Objects" />
+        <NavigationProperty Name="OrderProperty" Type="Intelex.MetPropertyEntity" Nullable="false" />
+        <NavigationProperty Name="Schema" Type="Intelex.MetSchemaEntity" Nullable="false" Partner="Objects" />
+        <NavigationProperty Name="ActionHandlers" Type="Collection(Intelex.MetObjectActionEntity)" Partner="Object" />
+        <NavigationProperty Name="AuditSettings" Type="Collection(Intelex.SysAuditSettingsEntity)" Partner="Object" />
+        <NavigationProperty Name="CustomInventories" Type="Collection(Intelex.SysCustomInventoryEntity)" Partner="Object" />
+        <NavigationProperty Name="Datasets" Type="Collection(Intelex.SysDatasetEntity)" Partner="Objects" />
+        <NavigationProperty Name="Filters" Type="Collection(Intelex.MetFilterEntity)" Partner="Object" />
+        <NavigationProperty Name="Links" Type="Collection(Intelex.MetLinkEntity)" Partner="Object" />
+        <NavigationProperty Name="ObjectProperties" Type="Collection(Intelex.MetPropertyEntity)" Partner="Object" />
+        <NavigationProperty Name="Permissions" Type="Collection(Intelex.SecPermissionMaskElementEntity)" Partner="Object" />
+        <NavigationProperty Name="SubTypes" Type="Collection(Intelex.MetObjectEntity)" Partner="SuperType" />
+        <NavigationProperty Name="SuperType" Type="Intelex.MetObjectEntity" Nullable="false" Partner="SubTypes" />
+      </EntityType>
+      <EntityType Name="SysCountryEntity">
+        <Key>
+          <PropertyRef Name="Id" />
+        </Key>
+        <Property Name="Id" Type="Edm.Guid" Nullable="false" />
+        <Property Name="Name" Type="Edm.String" />
+        <NavigationProperty Name="Locations" Type="Collection(Intelex.SysLocationEntity)" Partner="Country" />
+        <NavigationProperty Name="SystemType" Type="Intelex.SystemTypeEntity" Nullable="false" />
+      </EntityType>
+      <EntityType Name="SysLocationFiscalYearEntity">
+        <Key>
+          <PropertyRef Name="Id" />
+        </Key>
+        <Property Name="Id" Type="Edm.Guid" Nullable="false" />
+        <Property Name="DateCreated" Type="Edm.DateTimeOffset" />
+        <Property Name="DateModified" Type="Edm.DateTimeOffset" />
+        <Property Name="FiscalYearNamingType" Type="Enum.FiscalYearNamingType" />
+        <Property Name="StartMonth" Type="Edm.Int32" />
+        <NavigationProperty Name="Location" Type="Intelex.SysLocationEntity" Nullable="false" Partner="FiscalYears" />
+        <NavigationProperty Name="CreatedBy" Type="Intelex.SysEmployeeEntity" Nullable="false" />
+        <NavigationProperty Name="ModifiedBy" Type="Intelex.SysEmployeeEntity" Nullable="false" />
+      </EntityType>
+      <EntityType Name="SysGroupEntity" BaseType="Intelex.SysSubjectEntity" Abstract="true">
+        <Property Name="DefaultToolbarId" Type="Edm.Guid" />
+        <Property Name="Description" Type="Edm.String" />
+        <Property Name="Icon" Type="Edm.String" />
+        <NavigationProperty Name="Members" Type="Collection(Intelex.SysSubjectEntity)" Partner="MemberOf" />
+      </EntityType>
+      <EntityType Name="SysLocationRoleEntity" BaseType="Intelex.SysGroupEntity">
+        <NavigationProperty Name="Location" Type="Intelex.SysLocationEntity" Nullable="false" Partner="LocationRoles" />
+        <NavigationProperty Name="Role" Type="Intelex.SysRoleEntity" Nullable="false" Partner="LocationRoles" />
+      </EntityType>
+      <EntityType Name="NtfOverdueSetupEntity">
+        <Key>
+          <PropertyRef Name="Id" />
+        </Key>
+        <Property Name="Id" Type="Edm.Guid" Nullable="false" />
+        <Property Name="DateCreated" Type="Edm.DateTimeOffset" />
+        <Property Name="DateUpdated" Type="Edm.DateTimeOffset" />
+        <Property Name="IsEnabled" Type="Edm.Boolean" />
+        <NavigationProperty Name="Location" Type="Intelex.SysLocationEntity" Nullable="false" Partner="OverdueSetups" />
+        <NavigationProperty Name="DefaultSchedule" Type="Intelex.NtfScheduleEntity" Nullable="false" Partner="DefaultScheduleId_" />
+        <NavigationProperty Name="SetupScheduleMaps" Type="Collection(Intelex.NtfOverdueSetupScheduleMapEntity)" Partner="OverdueSetup" />
+      </EntityType>
+      <EntityType Name="SysEscalationLevelEntity" BaseType="Intelex.SysSubjectEntity">
+        <Property Name="Level" Type="Edm.Int32" />
+      </EntityType>
+      <EntityType Name="SysSystemSubjectEntity" BaseType="Intelex.SysSubjectEntity">
+        <Property Name="Type" Type="Enum.SystemSubjectType" />
+      </EntityType>
+      <EntityType Name="SysSecurityGroupEntity" BaseType="Intelex.SysGroupEntity">
+        <NavigationProperty Name="Application" Type="Intelex.SysModuleEntity" Nullable="false" Partner="SecurityGroups" />
+      </EntityType>
+      <EntityType Name="SysSystemGroupEntity" BaseType="Intelex.SysGroupEntity">
+        <Property Name="Type" Type="Enum.SystemGroupType" />
+      </EntityType>
+      <EntityType Name="SysUserGroupEntity" BaseType="Intelex.SysGroupEntity" />
+      <EntityType Name="SysRoleEntity" BaseType="Intelex.SysGroupEntity">
+        <Property Name="AllowManySubjects" Type="Edm.Boolean" />
+        <Property Name="TrickleDown" Type="Edm.Boolean" />
+        <NavigationProperty Name="LocationRoles" Type="Collection(Intelex.SysLocationRoleEntity)" Partner="Role" />
+      </EntityType>
+      <EntityType Name="MetReferenceTypeEntity" BaseType="Intelex.MetTypeEntity">
+        <NavigationProperty Name="Filter" Type="Intelex.MetFilterEntity" Nullable="false" />
+        <NavigationProperty Name="Object" Type="Intelex.MetObjectEntity" Nullable="false" />
+      </EntityType>
+      <EntityType Name="MetSimpleTypeEntity" BaseType="Intelex.MetTypeEntity">
+        <Property Name="DbType" Type="Enum.SqlDbTypes" />
+        <Property Name="DetailDisplayFormat" Type="Edm.String" />
+        <Property Name="DetailEditMask" Type="Edm.String" />
+        <Property Name="DetailFalseCaption" Type="Edm.String" />
+        <Property Name="DetailTrueCaption" Type="Edm.String" />
+        <Property Name="InventoryDisplayFormat" Type="Edm.String" />
+        <Property Name="InventoryEditMask" Type="Edm.String" />
+        <Property Name="InventoryFalseCaption" Type="Edm.String" />
+        <Property Name="InventoryTrueCaption" Type="Edm.String" />
+        <Property Name="MaxLength" Type="Edm.Int32" />
+        <Property Name="MaxValue" Type="Edm.String" />
+        <Property Name="MinLength" Type="Edm.Int32" />
+        <Property Name="MinValue" Type="Edm.String" />
+        <Property Name="Precision" Type="Edm.Byte" />
+        <Property Name="Scale" Type="Edm.Byte" />
+        <Property Name="TypeConverter" Type="Edm.String" />
+      </EntityType>
+      <EntityType Name="MetHierarchyObjectEntity" BaseType="Intelex.MetObjectEntity">
+        <Property Name="FolderName" Type="Edm.String" />
+        <Property Name="OrderType" Type="Enum.HierarchyOrderType" />
+        <Property Name="SelectionMode" Type="Enum.HierarchySelectionMode" />
+        <NavigationProperty Name="SelfReferenceProperty" Type="Intelex.MetReferencePropertyEntity" Nullable="false" />
+      </EntityType>
+      <EntityType Name="MetLookupObjectEntity" BaseType="Intelex.MetObjectEntity" />
+      <EntityType Name="SysEmployeeTypeEntity">
+        <Key>
+          <PropertyRef Name="Id" />
+        </Key>
+        <Property Name="Id" Type="Edm.Guid" Nullable="false" />
+        <Property Name="Name" Type="Edm.String" />
+        <NavigationProperty Name="Employees" Type="Collection(Intelex.SysEmployeeEntity)" Partner="EmployeeType" />
+      </EntityType>
+      <EntityType Name="App99483MM_Obj108492MMObject">
+        <Key>
+          <PropertyRef Name="Id" />
+        </Key>
+        <Property Name="Id" Type="Edm.Guid" Nullable="false" />
+        <Property Name="DateCreated" Type="Edm.DateTimeOffset" />
+        <Property Name="DateModified" Type="Edm.DateTimeOffset" />
+        <Property Name="Quantity" Type="Edm.Int64" />
+        <NavigationProperty Name="CreatedBy" Type="Intelex.SysEmployeeEntity" Nullable="false" />
+        <NavigationProperty Name="ModifiedBy" Type="Intelex.SysEmployeeEntity" Nullable="false" />
+        <NavigationProperty Name="Workflow" Type="Intelex.SysWorkflowInstanceEntity" Nullable="false" />
+        <NavigationProperty Name="SystemType" Type="Intelex.SystemTypeEntity" Nullable="false" />
+      </EntityType>
+      <EntityType Name="SysWorkflowActionRequiredEntity">
+        <Key>
+          <PropertyRef Name="Id" />
+        </Key>
+        <Property Name="Id" Type="Edm.Guid" Nullable="false" />
+        <Property Name="ActionRequiredType" Type="Enum.ActionRequiredItemType" />
+        <Property Name="Order" Type="Edm.Int32" />
+        <NavigationProperty Name="ActionRequired" Type="Collection(Intelex.SysWorkflowCheckListItemEntity)" Partner="ActionRequired" />
+        <NavigationProperty Name="Stage" Type="Intelex.SysWorkflowStageEntity" Nullable="false" Partner="ActionsRequired" />
+        <NavigationProperty Name="Property" Type="Intelex.MetPropertyEntity" Nullable="false" />
+      </EntityType>
+      <EntityType Name="SysWorkflowStageActionEntity">
+        <Key>
+          <PropertyRef Name="Id" />
+        </Key>
+        <Property Name="Id" Type="Edm.Guid" Nullable="false" />
+        <Property Name="DateCreated" Type="Edm.DateTimeOffset" />
+        <Property Name="DateModified" Type="Edm.DateTimeOffset" />
+        <Property Name="Confirmation" Type="Edm.String" />
+        <Property Name="FlowDefinition" Type="Edm.String" />
+        <Property Name="IsHidden" Type="Edm.Boolean" />
+        <Property Name="MobileCaption" Type="Edm.String" />
+        <Property Name="Name" Type="Edm.String" />
+        <Property Name="NavigateBackEnabled" Type="Edm.Boolean" />
+        <Property Name="Order" Type="Edm.Int32" />
+        <Property Name="RequireSignature" Type="Edm.Boolean" />
+        <Property Name="SystemName" Type="Edm.String" />
+        <Property Name="Tooltip" Type="Edm.String" />
+        <Property Name="TriggerCondition" Type="Edm.String" />
+        <Property Name="UrlIcon" Type="Edm.String" />
+        <Property Name="UserActionsRequired" Type="Edm.Boolean" />
+        <NavigationProperty Name="Stage" Type="Intelex.SysWorkflowStageEntity" Nullable="false" Partner="Actions" />
+        <NavigationProperty Name="CreatedBy" Type="Intelex.SysEmployeeEntity" Nullable="false" />
+        <NavigationProperty Name="ModifiedBy" Type="Intelex.SysEmployeeEntity" Nullable="false" />
+        <NavigationProperty Name="Permission" Type="Intelex.SecPermissionEntity" Nullable="false" />
+      </EntityType>
+      <EntityType Name="MetPropertyEntity" Abstract="true">
+        <Key>
+          <PropertyRef Name="Id" />
+        </Key>
+        <Property Name="Id" Type="Edm.Guid" Nullable="false" />
+        <Property Name="Calculation" Type="Edm.String" />
+        <Property Name="Caption" Type="Edm.String" />
+        <Property Name="Category" Type="Edm.String" />
+        <Property Name="DefaultValue" Type="Edm.String" />
+        <Property Name="Description" Type="Edm.String" />
+        <Property Name="DetailDisplayAs" Type="Enum.DetailDisplayField" />
+        <Property Name="DetailEditAs" Type="Enum.DetailDisplayField" />
+        <Property Name="DetailEmptyText" Type="Edm.String" />
+        <Property Name="Hint" Type="Edm.String" />
+        <Property Name="InventoryDisplayAs" Type="Enum.InventoryDisplayField" />
+        <Property Name="InventoryEditAs" Type="Enum.InventoryDisplayField" />
+        <Property Name="InventoryEmptyText" Type="Edm.String" />
+        <Property Name="IsAvailableForReporting" Type="Edm.Boolean" />
+        <Property Name="IsPrimaryKey" Type="Edm.Boolean" />
+        <Property Name="IsProtected" Type="Edm.Boolean" />
+        <Property Name="IsReadOnly" Type="Edm.Boolean" />
+        <Property Name="IsRequired" Type="Edm.Boolean" />
+        <Property Name="IsStatic" Type="Edm.Boolean" />
+        <Property Name="IsSystem" Type="Edm.Boolean" />
+        <Property Name="Name" Type="Edm.String" />
+        <Property Name="Span" Type="Edm.Boolean" />
+        <Property Name="SpellCheck" Type="Edm.Boolean" />
+        <Property Name="Tooltip" Type="Edm.String" />
+        <Property Name="UseTypeViewSettings" Type="Edm.Boolean" />
+        <NavigationProperty Name="Type" Type="Intelex.MetTypeEntity" Nullable="false" Partner="RelatedProperties" />
+        <NavigationProperty Name="Object" Type="Intelex.MetObjectEntity" Nullable="false" Partner="ObjectProperties" />
+        <NavigationProperty Name="EditPermission" Type="Intelex.SecPermissionEntity" Nullable="false" />
+        <NavigationProperty Name="ValueGenerator" Type="Intelex.MetValueGeneratorEntity" Nullable="false" />
+        <NavigationProperty Name="ViewPermission" Type="Intelex.SecPermissionEntity" Nullable="false" />
+        <NavigationProperty Name="CalculationDependencies" Type="Collection(Intelex.MetCalculationDependencyEntity)" Partner="StartProperty" />
+        <NavigationProperty Name="DefaultUnitOfMeasureValueProperties" Type="Collection(Intelex.MetSimplePropertyEntity)" Partner="DefaultUnitOfMeasureValueProperty" />
+        <NavigationProperty Name="ValidationRules" Type="Collection(Intelex.MetPropertyValidationEntity)" Partner="Property" />
+      </EntityType>
+      <EntityType Name="NtfSetupScheduleStageMapEntity">
+        <Key>
+          <PropertyRef Name="Id" />
+        </Key>
+        <Property Name="Id" Type="Edm.Guid" Nullable="false" />
+        <NavigationProperty Name="WorkflowStage" Type="Intelex.SysWorkflowStageEntity" Nullable="false" Partner="NotificationSetupMaps" />
+        <NavigationProperty Name="OverdueSetupScheduleMapId_" Type="Intelex.NtfOverdueSetupScheduleMapEntity" Nullable="false" Partner="ScheduleStageMaps" />
+      </EntityType>
+      <EntityType Name="NtfOverdueSetupScheduleMapEntity">
+        <Key>
+          <PropertyRef Name="Id" />
+        </Key>
+        <Property Name="Id" Type="Edm.Guid" Nullable="false" />
+        <Property Name="IsEnabled" Type="Edm.Boolean" />
+        <NavigationProperty Name="WorkflowStages" Type="Collection(Intelex.SysWorkflowStageEntity)" Partner="OverdueSchedules" />
+        <NavigationProperty Name="OverdueSetup" Type="Intelex.NtfOverdueSetupEntity" Nullable="false" Partner="SetupScheduleMaps" />
+        <NavigationProperty Name="ScheduleStageMaps" Type="Collection(Intelex.NtfSetupScheduleStageMapEntity)" Partner="OverdueSetupScheduleMapId_" />
+        <NavigationProperty Name="Schedule" Type="Intelex.NtfScheduleEntity" Nullable="false" Partner="OverdueSetupMaps" />
+      </EntityType>
+      <EntityType Name="SysWorkflowViewEntity">
+        <Key>
+          <PropertyRef Name="Id" />
+        </Key>
+        <Property Name="Id" Type="Edm.Guid" Nullable="false" />
+        <Property Name="IsDraft" Type="Edm.Boolean" />
+        <NavigationProperty Name="StagesUsingView" Type="Collection(Intelex.SysWorkflowStageEntity)" Partner="WorkflowView" />
+        <NavigationProperty Name="ViewProperties" Type="Collection(Intelex.SysWorkflowViewPropertyEntity)" Partner="WorkflowView" />
+      </EntityType>
+      <EntityType Name="SysComponentViewEntity">
+        <Key>
+          <PropertyRef Name="Id" />
+        </Key>
+        <Property Name="Id" Type="Edm.Guid" Nullable="false" />
+        <Property Name="Name" Type="Edm.String" />
+        <Property Name="SerializedDataDefinition" Type="Edm.Binary" />
+        <Property Name="Source" Type="Edm.String" />
+        <NavigationProperty Name="ParentView" Type="Intelex.SysConfigurableViewEntity" Nullable="false" Partner="ComponentViews" />
+      </EntityType>
+      <EntityType Name="SysConfigurableViewNodeEntity">
+        <Key>
+          <PropertyRef Name="Id" />
+        </Key>
+        <Property Name="Id" Type="Edm.Guid" Nullable="false" />
+        <Property Name="NodeName" Type="Edm.String" />
+        <Property Name="Order" Type="Edm.Int32" />
+        <Property Name="Value" Type="Edm.String" />
+        <NavigationProperty Name="ConfigurableView" Type="Intelex.SysConfigurableViewEntity" Nullable="false" Partner="Nodes" />
+        <NavigationProperty Name="Attributes" Type="Collection(Intelex.SysConfigurableViewNodeAttributeEntity)" Partner="Node" />
+        <NavigationProperty Name="ChildNodes" Type="Collection(Intelex.SysConfigurableViewNodeEntity)" Partner="ParentNode" />
+        <NavigationProperty Name="ParentNode" Type="Intelex.SysConfigurableViewNodeEntity" Nullable="false" Partner="ChildNodes" />
+      </EntityType>
+      <EntityType Name="SysConfigurableViewProfileEntity">
+        <Key>
+          <PropertyRef Name="Id" />
+        </Key>
+        <Property Name="Id" Type="Edm.Guid" Nullable="false" />
+        <Property Name="DateCreated" Type="Edm.DateTimeOffset" />
+        <Property Name="DateModified" Type="Edm.DateTimeOffset" />
+        <Property Name="ConfigurableViewActions" Type="Edm.String" />
+        <Property Name="Content" Type="Edm.String" />
+        <Property Name="ParsedView" Type="Edm.String" />
+        <Property Name="ProfileType" Type="Enum.ProfileType" />
+        <Property Name="ViewDefinition" Type="Edm.String" />
+        <NavigationProperty Name="ConfigurableView" Type="Intelex.SysConfigurableViewEntity" Nullable="false" Partner="Profiles" />
+        <NavigationProperty Name="CreatedBy" Type="Intelex.SysEmployeeEntity" Nullable="false" />
+        <NavigationProperty Name="ModifiedBy" Type="Intelex.SysEmployeeEntity" Nullable="false" />
+      </EntityType>
+      <EntityType Name="SysConfigurableViewHistoryEntity">
+        <Key>
+          <PropertyRef Name="Id" />
+        </Key>
+        <Property Name="Id" Type="Edm.Guid" Nullable="false" />
+        <Property Name="DateCreated" Type="Edm.DateTimeOffset" />
+        <Property Name="DateModified" Type="Edm.DateTimeOffset" />
+        <Property Name="Comments" Type="Edm.String" />
+        <Property Name="ConfigurableViewActions" Type="Edm.String" />
+        <Property Name="Content" Type="Edm.String" />
+        <Property Name="Revision" Type="Edm.Int32" />
+        <NavigationProperty Name="View" Type="Intelex.SysConfigurableViewEntity" Nullable="false" Partner="ViewHistory" />
+        <NavigationProperty Name="CreatedBy" Type="Intelex.SysEmployeeEntity" Nullable="false" />
+        <NavigationProperty Name="ModifiedBy" Type="Intelex.SysEmployeeEntity" Nullable="false" />
+        <NavigationProperty Name="Profiles" Type="Collection(Intelex.SysConfigurableViewHistoryProfileEntity)" Partner="ConfigurableViewHistory" />
+      </EntityType>
+      <EntityType Name="SysWalkthroughEntity">
+        <Key>
+          <PropertyRef Name="Id" />
+        </Key>
+        <Property Name="Id" Type="Edm.Guid" Nullable="false" />
+        <Property Name="Description" Type="Edm.String" />
+        <Property Name="Name" Type="Edm.String" />
+        <Property Name="Uitheme" Type="Enum.ThemeType" />
+        <NavigationProperty Name="WalkthroughSteps" Type="Collection(Intelex.SysWalkthroughStepEntity)" Partner="Walkthrough" />
+      </EntityType>
+      <EntityType Name="SysConfigurableViewWalkthroughEntity" BaseType="Intelex.SysWalkthroughEntity">
+        <NavigationProperty Name="ConfigurableView" Type="Intelex.SysConfigurableViewEntity" Nullable="false" Partner="Walkthroughs" />
+      </EntityType>
+      <EntityType Name="SysWalkthroughStepEntity">
+        <Key>
+          <PropertyRef Name="Id" />
+        </Key>
+        <Property Name="Id" Type="Edm.Guid" Nullable="false" />
+        <Property Name="ElementSelector" Type="Edm.String" />
+        <Property Name="Instructions" Type="Edm.String" />
+        <Property Name="StepOrder" Type="Edm.Int32" />
+        <NavigationProperty Name="Walkthrough" Type="Intelex.SysWalkthroughEntity" Nullable="false" Partner="WalkthroughSteps" />
+      </EntityType>
+      <EntityType Name="SysConfigurableViewWalkthroughStepEntity" BaseType="Intelex.SysWalkthroughStepEntity">
+        <NavigationProperty Name="ConfigurableView" Type="Intelex.SysConfigurableViewEntity" Nullable="false" Partner="WalkthroughSteps" />
+      </EntityType>
+      <EntityType Name="SysWorkflowReccurenceSettingEntity">
+        <Key>
+          <PropertyRef Name="Id" />
+        </Key>
+        <Property Name="Id" Type="Edm.Guid" Nullable="false" />
+        <Property Name="IsAutomaticallyRescheduled" Type="Edm.Boolean" />
+        <Property Name="IsGracePeriodEnabled" Type="Edm.Boolean" />
+        <Property Name="RescheduleStrategyType" Type="Enum.RescheduleStrategyType" />
+        <Property Name="ScheduleType" Type="Enum.WorkflowScheduleType" />
+        <NavigationProperty Name="PublishedSchemas" Type="Collection(Intelex.SysWorkflowSchemaEntity)" Partner="RecurringSettings" />
+        <NavigationProperty Name="DraftSchemas" Type="Collection(Intelex.SysWorkflowDraftSchemaEntity)" Partner="RecurrenceSettings" />
+      </EntityType>
+      <EntityType Name="SysWorkflowStartNotificationEntity">
+        <Key>
+          <PropertyRef Name="Id" />
+        </Key>
+        <Property Name="Id" Type="Edm.Guid" Nullable="false" />
+        <NavigationProperty Name="Template" Type="Intelex.NtfTemplateEntity" Nullable="false" />
+        <NavigationProperty Name="Subjects" Type="Collection(Intelex.SysWorkflowNotificationSubjectEntity)" Partner="StartNofication" />
+      </EntityType>
+      <EntityType Name="SysWorkflowDraftSchemaEntity">
+        <Key>
+          <PropertyRef Name="Id" />
+        </Key>
+        <Property Name="Id" Type="Edm.Guid" Nullable="false" />
+        <Property Name="DateCreated" Type="Edm.DateTimeOffset" />
+        <Property Name="DateModified" Type="Edm.DateTimeOffset" />
+        <Property Name="Description" Type="Edm.String" />
+        <Property Name="DisableCondition" Type="Edm.String" />
+        <Property Name="EnableActionsOnCreate" Type="Edm.Boolean" />
+        <Property Name="EnableActionsOnEdit" Type="Edm.Boolean" />
+        <Property Name="HasPendingChanges" Type="Edm.Boolean" />
+        <Property Name="IsActive" Type="Edm.Boolean" />
+        <Property Name="IsCommentsEnable" Type="Edm.Boolean" />
+        <Property Name="IsDateNotRequiredEnabled" Type="Edm.Boolean" />
+        <Property Name="IsDeleted" Type="Edm.Boolean" />
+        <Property Name="IsRecurring" Type="Edm.Boolean" />
+        <Property Name="LastPublishDate" Type="Edm.DateTimeOffset" />
+        <Property Name="Name" Type="Edm.String" />
+        <Property Name="StartCondition" Type="Edm.String" />
+        <NavigationProperty Name="PublishedWorkflows" Type="Collection(Intelex.SysWorkflowSchemaEntity)" Partner="WorkflowDraft" />
+        <NavigationProperty Name="RecurrenceSettings" Type="Intelex.SysWorkflowReccurenceSettingEntity" Nullable="false" Partner="DraftSchemas" />
+        <NavigationProperty Name="CreatedBy" Type="Intelex.SysEmployeeEntity" Nullable="false" />
+        <NavigationProperty Name="DateNotRequiredFinalStatus" Type="Intelex.SysWorkflowDraftStatusEntity" Nullable="false" />
+        <NavigationProperty Name="DateNotRequiredFinalView" Type="Intelex.SysConfigurableViewEntity" Nullable="false" />
+        <NavigationProperty Name="DisableView" Type="Intelex.SysConfigurableViewEntity" Nullable="false" />
+        <NavigationProperty Name="FirstStage" Type="Intelex.SysWorkflowDraftStageEntity" Nullable="false" />
+        <NavigationProperty Name="ModifiedBy" Type="Intelex.SysEmployeeEntity" Nullable="false" />
+        <NavigationProperty Name="Object" Type="Intelex.MetObjectEntity" Nullable="false" />
+        <NavigationProperty Name="StartNotification" Type="Intelex.SysWorkflowStartNotificationEntity" Nullable="false" />
+        <NavigationProperty Name="Resources" Type="Collection(Intelex.SysWorkflowResourceKeyEntity)" Partner="WorkflowDraftSchema" />
+        <NavigationProperty Name="Stages" Type="Collection(Intelex.SysWorkflowDraftStageEntity)" Partner="WorkflowDraftSchema" />
+        <NavigationProperty Name="Statuses" Type="Collection(Intelex.SysWorkflowDraftStatusEntity)" Partner="WorkflowDraftSchema" />
+      </EntityType>
+      <EntityType Name="MetObjectActionEntity">
+        <Key>
+          <PropertyRef Name="Id" />
+        </Key>
+        <Property Name="Id" Type="Edm.Guid" Nullable="false" />
+        <Property Name="ActionType" Type="Enum.ObjectActionType" />
+        <Property Name="Description" Type="Edm.String" />
+        <Property Name="Flow" Type="Edm.String" />
+        <Property Name="Name" Type="Edm.String" />
+        <NavigationProperty Name="Object" Type="Intelex.MetObjectEntity" Nullable="false" Partner="ActionHandlers" />
+      </EntityType>
+      <EntityType Name="SysAuditSettingsEntity">
+        <Key>
+          <PropertyRef Name="Id" />
+        </Key>
+        <Property Name="Id" Type="Edm.Guid" Nullable="false" />
+        <Property Name="Type" Type="Enum.AuditType" />
+        <NavigationProperty Name="Object" Type="Intelex.MetObjectEntity" Nullable="false" Partner="AuditSettings" />
+        <NavigationProperty Name="Permission" Type="Intelex.SecPermissionEntity" Nullable="false" Partner="AuditSettings" />
+        <NavigationProperty Name="Subject" Type="Intelex.SysSubjectEntity" Nullable="false" />
+      </EntityType>
+      <EntityType Name="SysCustomInventoryEntity">
+        <Key>
+          <PropertyRef Name="Id" />
+        </Key>
+        <Property Name="Id" Type="Edm.Guid" Nullable="false" />
+        <Property Name="DateCreated" Type="Edm.DateTimeOffset" />
+        <Property Name="DateModified" Type="Edm.DateTimeOffset" />
+        <Property Name="Caption" Type="Edm.String" />
+        <NavigationProperty Name="Object" Type="Intelex.MetObjectEntity" Nullable="false" Partner="CustomInventories" />
+        <NavigationProperty Name="CreatedBy" Type="Intelex.SysEmployeeEntity" Nullable="false" />
+        <NavigationProperty Name="InventoryBase" Type="Intelex.SysInventoryBaseEntity" Nullable="false" Partner="CustomInventories" />
+        <NavigationProperty Name="InventoryView" Type="Intelex.SysInventoryViewEntity" Nullable="false" Partner="InventoryView" />
+        <NavigationProperty Name="ModifiedBy" Type="Intelex.SysEmployeeEntity" Nullable="false" />
+        <NavigationProperty Name="ViewFilter" Type="Intelex.SysViewFilterEntity" Nullable="false" Partner="CustomInventories" />
+      </EntityType>
+      <EntityType Name="SysDatasetEntity">
+        <Key>
+          <PropertyRef Name="Id" />
+        </Key>
+        <Property Name="Id" Type="Edm.Int32" Nullable="false" />
+        <Property Name="DateCreated" Type="Edm.DateTimeOffset" />
+        <Property Name="DateModified" Type="Edm.DateTimeOffset" />
+        <Property Name="DefaultPermission" Type="Edm.Int32" />
+        <Property Name="Description" Type="Edm.String" />
+        <Property Name="FolderId" Type="Edm.String" />
+        <Property Name="FolderIdfield" Type="Edm.String" />
+        <Property Name="Guid" Type="Edm.Guid" />
+        <Property Name="LocationFilterType" Type="Edm.Int32" />
+        <Property Name="Name" Type="Edm.String" />
+        <Property Name="OwnerId" Type="Edm.String" />
+        <Property Name="ViewName" Type="Edm.String" />
+        <Property Name="XmlData" Type="Edm.String" />
+        <NavigationProperty Name="Objects" Type="Collection(Intelex.MetObjectEntity)" Partner="Datasets" />
+        <NavigationProperty Name="DatasetId__" Type="Collection(Intelex.SysDatasetRelationEntity)" Partner="DatasetId_" />
+        <NavigationProperty Name="ObjectToDatasets" Type="Collection(Intelex.SysObjectToDatasetMapEntity)" Partner="Dataset" />
+        <NavigationProperty Name="RelatedDsId_" Type="Collection(Intelex.SysDatasetRelationEntity)" Partner="RelatedDsId_" />
+      </EntityType>
+      <EntityType Name="MetFilterEntity">
+        <Key>
+          <PropertyRef Name="Id" />
+        </Key>
+        <Property Name="Id" Type="Edm.Guid" Nullable="false" />
+        <Property Name="Description" Type="Edm.String" />
+        <Property Name="FilterExpression" Type="Edm.String" />
+        <Property Name="Name" Type="Edm.String" />
+        <NavigationProperty Name="Object" Type="Intelex.MetObjectEntity" Nullable="false" Partner="Filters" />
+        <NavigationProperty Name="ReferenceProperties" Type="Collection(Intelex.MetReferencePropertyEntity)" Partner="Filter" />
+      </EntityType>
+      <EntityType Name="MetGroupEntity">
+        <Key>
+          <PropertyRef Name="Id" />
+        </Key>
+        <Property Name="Id" Type="Edm.Guid" Nullable="false" />
+        <Property Name="Description" Type="Edm.String" />
+        <Property Name="Name" Type="Edm.String" />
+        <NavigationProperty Name="Objects" Type="Collection(Intelex.MetObjectEntity)" Partner="Group" />
+      </EntityType>
+      <EntityType Name="MetLinkEntity">
+        <Key>
+          <PropertyRef Name="Id" />
+        </Key>
+        <Property Name="Id" Type="Edm.Guid" Nullable="false" />
+        <Property Name="Caption" Type="Edm.String" />
+        <Property Name="Description" Type="Edm.String" />
+        <Property Name="FlowDefinition" Type="Edm.String" />
+        <Property Name="LinkTo" Type="Edm.String" />
+        <Property Name="LinkType" Type="Enum.LinkType" />
+        <Property Name="Name" Type="Edm.String" />
+        <Property Name="OpenInNewWindow" Type="Edm.Boolean" />
+        <Property Name="TabName" Type="Edm.String" />
+        <Property Name="Tooltip" Type="Edm.String" />
+        <Property Name="ViewName" Type="Edm.String" />
+        <NavigationProperty Name="Object" Type="Intelex.MetObjectEntity" Nullable="false" Partner="Links" />
+        <NavigationProperty Name="LinkObject" Type="Intelex.MetObjectEntity" Nullable="false" />
+        <NavigationProperty Name="Module" Type="Intelex.SysModuleEntity" Nullable="false" />
+        <NavigationProperty Name="Permission" Type="Intelex.SecPermissionEntity" Nullable="false" />
+      </EntityType>
+      <EntityType Name="SysModuleEntity">
+        <Key>
+          <PropertyRef Name="Id" />
+        </Key>
+        <Property Name="Id" Type="Edm.Guid" Nullable="false" />
+        <Property Name="DateCreated" Type="Edm.DateTimeOffset" />
+        <Property Name="DateModified" Type="Edm.DateTimeOffset" />
+        <Property Name="Caption" Type="Edm.String" />
+        <Property Name="Description" Type="Edm.String" />
+        <Property Name="Disabled" Type="Edm.Boolean" />
+        <Property Name="Index" Type="Edm.Int16" />
+        <Property Name="IsAvailableForMobile" Type="Edm.Boolean" />
+        <Property Name="IsAvailableOffline" Type="Edm.Boolean" />
+        <Property Name="LegacyModuleId" Type="Edm.Int32" />
+        <Property Name="MobileCaption" Type="Edm.String" />
+        <Property Name="MobileIcon" Type="Edm.String" />
+        <Property Name="UrlCaption" Type="Edm.String" />
+        <Property Name="UrlIcon" Type="Edm.String" />
+        <Property Name="VersionNumber" Type="Edm.String" />
+        <Property Name="VersionOrder" Type="Edm.Int32" />
+        <NavigationProperty Name="SecurityGroups" Type="Collection(Intelex.SysSecurityGroupEntity)" Partner="Application" />
+        <NavigationProperty Name="Objects" Type="Collection(Intelex.MetObjectEntity)" Partner="Module" />
+        <NavigationProperty Name="CreatedBy" Type="Intelex.SysEmployeeEntity" Nullable="false" />
+        <NavigationProperty Name="Group" Type="Intelex.SysModuleGroupEntity" Nullable="false" Partner="Modules" />
+        <NavigationProperty Name="ModifiedBy" Type="Intelex.SysEmployeeEntity" Nullable="false" />
+        <NavigationProperty Name="SelectedModuleTab" Type="Intelex.SysModuleTabEntity" Nullable="false" />
+        <NavigationProperty Name="Tabs" Type="Collection(Intelex.SysModuleTabEntity)" Partner="Module" />
+      </EntityType>
+      <EntityType Name="SecPermissionMaskElementEntity">
+        <Key>
+          <PropertyRef Name="Id" />
+        </Key>
+        <Property Name="Id" Type="Edm.Guid" Nullable="false" />
+        <Property Name="Caption" Type="Edm.String" />
+        <Property Name="Description" Type="Edm.String" />
+        <Property Name="IsSystem" Type="Edm.Boolean" />
+        <NavigationProperty Name="Object" Type="Intelex.MetObjectEntity" Nullable="false" Partner="Permissions" />
+        <NavigationProperty Name="IncludedIn" Type="Collection(Intelex.SecPermissionMaskEntity)" Partner="Permissions" />
+      </EntityType>
+      <EntityType Name="MetSchemaEntity">
+        <Key>
+          <PropertyRef Name="Id" />
+        </Key>
+        <Property Name="Id" Type="Edm.Guid" Nullable="false" />
+        <Property Name="Description" Type="Edm.String" />
+        <Property Name="Name" Type="Edm.String" />
+        <Property Name="SchemaName" Type="Edm.String" />
+        <NavigationProperty Name="Objects" Type="Collection(Intelex.MetObjectEntity)" Partner="Schema" />
+      </EntityType>
+      <EntityType Name="MetTypeValidationEntity">
+        <Key>
+          <PropertyRef Name="Id" />
+        </Key>
+        <Property Name="Id" Type="Edm.Guid" Nullable="false" />
+        <Property Name="Enable" Type="Edm.Boolean" />
+        <Property Name="IsSystem" Type="Edm.Boolean" />
+        <Property Name="Name" Type="Edm.String" />
+        <Property Name="Order" Type="Edm.Int32" />
+        <Property Name="ValidationRule" Type="Edm.String" />
+        <NavigationProperty Name="Type" Type="Intelex.MetTypeEntity" Nullable="false" Partner="ValidationRules" />
+      </EntityType>
+      <EntityType Name="MetValueGeneratorEntity">
+        <Key>
+          <PropertyRef Name="Id" />
+        </Key>
+        <Property Name="Id" Type="Edm.Guid" Nullable="false" />
+        <Property Name="Name" Type="Edm.String" />
+        <Property Name="Settings" Type="Edm.String" />
+        <NavigationProperty Name="Type" Type="Intelex.MetTypeEntity" Nullable="false" Partner="ValueGanerators" />
+      </EntityType>
+      <EntityType Name="NtfScheduleEntity">
+        <Key>
+          <PropertyRef Name="Id" />
+        </Key>
+        <Property Name="Id" Type="Edm.Guid" Nullable="false" />
+        <Property Name="DateCreated" Type="Edm.DateTimeOffset" />
+        <Property Name="DateModified" Type="Edm.DateTimeOffset" />
+        <Property Name="Name" Type="Edm.String" />
+        <NavigationProperty Name="DefaultScheduleId_" Type="Collection(Intelex.NtfOverdueSetupEntity)" Partner="DefaultSchedule" />
+        <NavigationProperty Name="OverdueSetupMaps" Type="Collection(Intelex.NtfOverdueSetupScheduleMapEntity)" Partner="Schedule" />
+        <NavigationProperty Name="CreatedBy" Type="Intelex.SysEmployeeEntity" Nullable="false" />
+        <NavigationProperty Name="ModifiedBy" Type="Intelex.SysEmployeeEntity" Nullable="false" />
+        <NavigationProperty Name="Object" Type="Intelex.MetObjectEntity" Nullable="false" />
+        <NavigationProperty Name="Recipients" Type="Collection(Intelex.NtfScheduleRecipientEntity)" Partner="Schedule" />
+      </EntityType>
+      <EntityType Name="MetReferencePropertyEntity" BaseType="Intelex.MetPropertyEntity">
+        <Property Name="AllowPermissionOverride" Type="Edm.Boolean" />
+        <Property Name="BypassSecurity" Type="Edm.Boolean" />
+        <Property Name="FilterExpression" Type="Edm.String" />
+        <Property Name="FilterType" Type="Enum.FieldFilterType" />
+        <Property Name="IsStartOfRelation" Type="Edm.Boolean" />
+        <Property Name="LockRelated" Type="Edm.Boolean" />
+        <Property Name="OverrideOrder" Type="Edm.Int32" />
+        <NavigationProperty Name="Filter" Type="Intelex.MetFilterEntity" Nullable="false" Partner="ReferenceProperties" />
+        <NavigationProperty Name="ConfigurableView" Type="Intelex.SysConfigurableViewEntity" Nullable="false" />
+        <NavigationProperty Name="DisplayProperty" Type="Intelex.MetPropertyEntity" Nullable="false" />
+        <NavigationProperty Name="Relation" Type="Intelex.MetRelationEntity" Nullable="false" Partner="ReferenceProperties" />
+      </EntityType>
+      <EntityType Name="MetSimplePropertyEntity" BaseType="Intelex.MetPropertyEntity">
+        <Property Name="DetailDisplayFormat" Type="Edm.String" />
+        <Property Name="DetailEditMask" Type="Edm.String" />
+        <Property Name="FieldName" Type="Edm.String" />
+        <Property Name="InventoryDisplayFormat" Type="Edm.String" />
+        <Property Name="InventoryEditMask" Type="Edm.String" />
+        <Property Name="IsLocalizable" Type="Edm.Boolean" />
+        <Property Name="MaxLength" Type="Edm.Int32" />
+        <Property Name="MaxValue" Type="Edm.String" />
+        <Property Name="MinLength" Type="Edm.Int32" />
+        <Property Name="MinValue" Type="Edm.String" />
+        <Property Name="Precision" Type="Edm.Byte" />
+        <Property Name="Scale" Type="Edm.Byte" />
+        <Property Name="TimeZoneCapture" Type="Edm.Boolean" />
+        <NavigationProperty Name="DefaultUnitOfMeasureValueProperty" Type="Intelex.MetPropertyEntity" Nullable="false" Partner="DefaultUnitOfMeasureValueProperties" />
+        <NavigationProperty Name="DefaultUnitOfMeasure" Type="Intelex.UomUnitOfMeasureEntity" Nullable="false" Partner="PropertiesUsingUnit" />
+        <NavigationProperty Name="UnitOfMeasureProperty" Type="Intelex.MetPropertyEntity" Nullable="false" />
+      </EntityType>
+      <EntityType Name="SysStaticViewWalkthroughEntity" BaseType="Intelex.SysWalkthroughEntity">
+        <Property Name="StaticViewName" Type="Edm.String" />
+      </EntityType>
+      <EntityType Name="SysStaticViewWalkthroughStepEntity" BaseType="Intelex.SysWalkthroughStepEntity">
+        <Property Name="StaticViewName" Type="Edm.String" />
+      </EntityType>
+      <EntityType Name="SecPermissionMaskEntity" BaseType="Intelex.SecPermissionMaskElementEntity">
+        <Property Name="IsSimple" Type="Edm.Boolean" />
+        <NavigationProperty Name="Permissions" Type="Collection(Intelex.SecPermissionMaskElementEntity)" Partner="IncludedIn" />
+      </EntityType>
+      <EntityType Name="SecPermissionEntity" BaseType="Intelex.SecPermissionMaskElementEntity">
+        <Property Name="Name" Type="Edm.String" />
+        <NavigationProperty Name="AuditSettings" Type="Collection(Intelex.SysAuditSettingsEntity)" Partner="Permission" />
+      </EntityType>
+      <EntityType Name="SecSystemPermissionMaskEntity" BaseType="Intelex.SecPermissionMaskEntity">
+        <Property Name="Type" Type="Edm.Byte" />
+      </EntityType>
+      <EntityType Name="SecRightEntity" BaseType="Intelex.SecPermissionMaskEntity">
+        <Property Name="Name" Type="Edm.String" />
+      </EntityType>
+      <EntityType Name="MetCalculationDependencyEntity">
+        <Key>
+          <PropertyRef Name="Id" />
+        </Key>
+        <Property Name="Id" Type="Edm.Guid" Nullable="false" />
+        <Property Name="PropertyExpression" Type="Edm.String" />
+        <NavigationProperty Name="StartProperty" Type="Intelex.MetPropertyEntity" Nullable="false" Partner="CalculationDependencies" />
+        <NavigationProperty Name="EndProperty" Type="Intelex.MetPropertyEntity" Nullable="false" />
+      </EntityType>
+      <EntityType Name="MetPropertyValidationEntity">
+        <Key>
+          <PropertyRef Name="Id" />
+        </Key>
+        <Property Name="Id" Type="Edm.Guid" Nullable="false" />
+        <Property Name="Enable" Type="Edm.Boolean" />
+        <Property Name="Name" Type="Edm.String" />
+        <Property Name="Order" Type="Edm.Int32" />
+        <Property Name="ValidationRule" Type="Edm.String" />
+        <NavigationProperty Name="Property" Type="Intelex.MetPropertyEntity" Nullable="false" Partner="ValidationRules" />
+      </EntityType>
+      <EntityType Name="SysWorkflowViewPropertyEntity">
+        <Key>
+          <PropertyRef Name="Id" />
+        </Key>
+        <Property Name="Id" Type="Edm.Guid" Nullable="false" />
+        <Property Name="Order" Type="Edm.Int32" />
+        <NavigationProperty Name="WorkflowView" Type="Intelex.SysWorkflowViewEntity" Nullable="false" Partner="ViewProperties" />
+        <NavigationProperty Name="Object" Type="Intelex.MetObjectEntity" Nullable="false" />
+        <NavigationProperty Name="Property" Type="Intelex.MetPropertyEntity" Nullable="false" />
+      </EntityType>
+      <EntityType Name="SysConfigurableViewNodeAttributeEntity">
+        <Key>
+          <PropertyRef Name="Id" />
+        </Key>
+        <Property Name="Id" Type="Edm.Guid" Nullable="false" />
+        <Property Name="Name" Type="Edm.String" />
+        <Property Name="Value" Type="Edm.String" />
+        <NavigationProperty Name="Node" Type="Intelex.SysConfigurableViewNodeEntity" Nullable="false" Partner="Attributes" />
+      </EntityType>
+      <EntityType Name="SysConfigurableViewHistoryProfileEntity">
+        <Key>
+          <PropertyRef Name="Id" />
+        </Key>
+        <Property Name="Id" Type="Edm.Guid" Nullable="false" />
+        <Property Name="ConfigurableViewActions" Type="Edm.String" />
+        <Property Name="Content" Type="Edm.String" />
+        <Property Name="ProfileType" Type="Enum.ProfileType" />
+        <NavigationProperty Name="ConfigurableViewHistory" Type="Intelex.SysConfigurableViewHistoryEntity" Nullable="false" Partner="Profiles" />
+      </EntityType>
+      <EntityType Name="SysWorkflowNotificationSubjectEntity">
+        <Key>
+          <PropertyRef Name="Id" />
+        </Key>
+        <Property Name="Id" Type="Edm.Guid" Nullable="false" />
+        <NavigationProperty Name="StartNofication" Type="Intelex.SysWorkflowStartNotificationEntity" Nullable="false" Partner="Subjects" />
+        <NavigationProperty Name="Subject" Type="Intelex.SysSubjectEntity" Nullable="false" />
+      </EntityType>
+      <EntityType Name="NtfTemplateEntity">
+        <Key>
+          <PropertyRef Name="Id" />
+        </Key>
+        <Property Name="Id" Type="Edm.Guid" Nullable="false" />
+        <Property Name="DateCreated" Type="Edm.DateTimeOffset" />
+        <Property Name="DateModified" Type="Edm.DateTimeOffset" />
+        <Property Name="Description" Type="Edm.String" />
+        <Property Name="IsSystem" Type="Edm.Boolean" />
+        <Property Name="Name" Type="Edm.String" />
+        <Property Name="RecordNumber" Type="Edm.Int64" />
+        <NavigationProperty Name="CreatedBy" Type="Intelex.SysEmployeeEntity" Nullable="false" />
+        <NavigationProperty Name="ModifiedBy" Type="Intelex.SysEmployeeEntity" Nullable="false" />
+        <NavigationProperty Name="Object" Type="Intelex.MetObjectEntity" Nullable="false" />
+      </EntityType>
+      <EntityType Name="SysWorkflowDraftStatusEntity">
+        <Key>
+          <PropertyRef Name="Id" />
+        </Key>
+        <Property Name="Id" Type="Edm.Guid" Nullable="false" />
+        <Property Name="DateCreated" Type="Edm.DateTimeOffset" />
+        <Property Name="DateModified" Type="Edm.DateTimeOffset" />
+        <Property Name="Description" Type="Edm.String" />
+        <Property Name="Name" Type="Edm.String" />
+        <NavigationProperty Name="WorkflowDraftSchema" Type="Intelex.SysWorkflowDraftSchemaEntity" Nullable="false" Partner="Statuses" />
+        <NavigationProperty Name="CreatedBy" Type="Intelex.SysEmployeeEntity" Nullable="false" />
+        <NavigationProperty Name="ModifiedBy" Type="Intelex.SysEmployeeEntity" Nullable="false" />
+      </EntityType>
+      <EntityType Name="SysWorkflowDraftStageEntity">
+        <Key>
+          <PropertyRef Name="Id" />
+        </Key>
+        <Property Name="Id" Type="Edm.Guid" Nullable="false" />
+        <Property Name="DateCreated" Type="Edm.DateTimeOffset" />
+        <Property Name="DateModified" Type="Edm.DateTimeOffset" />
+        <Property Name="Description" Type="Edm.String" />
+        <Property Name="DueDateExpression" Type="Edm.String" />
+        <Property Name="DueDateLengthType" Type="Enum.DueDateLengthType" />
+        <Property Name="DueDateLengthValue" Type="Edm.Int32" />
+        <Property Name="InheritedPermission" Type="Edm.Boolean" />
+        <Property Name="IsStandardPermission" Type="Edm.Boolean" />
+        <Property Name="Name" Type="Edm.String" />
+        <Property Name="RecipientExpression" Type="Edm.String" />
+        <Property Name="RecipientType" Type="Enum.RecipientType" />
+        <Property Name="SerializedPermissions" Type="Edm.String" />
+        <Property Name="StageAction" Type="Enum.StageActionType" />
+        <Property Name="StayInEditMode" Type="Edm.Boolean" />
+        <Property Name="SystemName" Type="Edm.String" />
+        <Property Name="TaskType" Type="Enum.TaskType" />
+        <NavigationProperty Name="WorkflowDraftSchema" Type="Intelex.SysWorkflowDraftSchemaEntity" Nullable="false" Partner="Stages" />
+        <NavigationProperty Name="CreatedBy" Type="Intelex.SysEmployeeEntity" Nullable="false" />
+        <NavigationProperty Name="DueDateProperty" Type="Intelex.MetPropertyEntity" Nullable="false" />
+        <NavigationProperty Name="FinalStatus" Type="Intelex.SysWorkflowDraftStatusEntity" Nullable="false" />
+        <NavigationProperty Name="ModifiedBy" Type="Intelex.SysEmployeeEntity" Nullable="false" />
+        <NavigationProperty Name="NamedRecipient" Type="Intelex.SysEmployeeEntity" Nullable="false" />
+        <NavigationProperty Name="RecipientProperty" Type="Intelex.MetPropertyEntity" Nullable="false" />
+        <NavigationProperty Name="RecipientRole" Type="Intelex.SysRoleEntity" Nullable="false" />
+        <NavigationProperty Name="Status" Type="Intelex.SysWorkflowDraftStatusEntity" Nullable="false" />
+        <NavigationProperty Name="UpdateProperty" Type="Intelex.MetPropertyEntity" Nullable="false" />
+        <NavigationProperty Name="View" Type="Intelex.SysConfigurableViewEntity" Nullable="false" />
+        <NavigationProperty Name="WorkflowView" Type="Intelex.SysWorkflowViewEntity" Nullable="false" />
+      </EntityType>
+      <EntityType Name="SysResourceKeyEntity">
+        <Key>
+          <PropertyRef Name="Id" />
+        </Key>
+        <Property Name="Id" Type="Edm.Guid" Nullable="false" />
+        <Property Name="DefaultValue" Type="Edm.String" />
+        <Property Name="MetaResourceKey" Type="Edm.String" />
+        <Property Name="ResourceType" Type="Edm.String" />
+        <Property Name="VirtualPath" Type="Edm.String" />
+      </EntityType>
+      <EntityType Name="SysWorkflowResourceKeyEntity" BaseType="Intelex.SysResourceKeyEntity">
+        <Property Name="IsPublished" Type="Edm.Boolean" />
+        <NavigationProperty Name="WorkflowDraftSchema" Type="Intelex.SysWorkflowDraftSchemaEntity" Nullable="false" Partner="Resources" />
+      </EntityType>
+      <EntityType Name="SysInventoryBaseEntity">
+        <Key>
+          <PropertyRef Name="Id" />
+        </Key>
+        <Property Name="Id" Type="Edm.Guid" Nullable="false" />
+        <Property Name="InventoryControlId" Type="Edm.String" />
+        <NavigationProperty Name="CustomInventories" Type="Collection(Intelex.SysCustomInventoryEntity)" Partner="InventoryBase" />
+        <NavigationProperty Name="InventoryViews" Type="Collection(Intelex.SysInventoryViewEntity)" Partner="InventoryBase" />
+        <NavigationProperty Name="ViewFilters" Type="Collection(Intelex.SysViewFilterEntity)" Partner="InventoryBase" />
+      </EntityType>
+      <EntityType Name="SysInventoryViewEntity">
+        <Key>
+          <PropertyRef Name="Id" />
+        </Key>
+        <Property Name="Id" Type="Edm.Guid" Nullable="false" />
+        <Property Name="DateCreated" Type="Edm.DateTimeOffset" />
+        <Property Name="DateModified" Type="Edm.DateTimeOffset" />
+        <Property Name="Caption" Type="Edm.String" />
+        <Property Name="Source" Type="Edm.String" />
+        <NavigationProperty Name="InventoryView" Type="Collection(Intelex.SysCustomInventoryEntity)" Partner="InventoryView" />
+        <NavigationProperty Name="InventoryBase" Type="Intelex.SysInventoryBaseEntity" Nullable="false" Partner="InventoryViews" />
+        <NavigationProperty Name="CreatedBy" Type="Intelex.SysEmployeeEntity" Nullable="false" />
+        <NavigationProperty Name="ModifiedBy" Type="Intelex.SysEmployeeEntity" Nullable="false" />
+        <NavigationProperty Name="Object" Type="Intelex.MetObjectEntity" Nullable="false" />
+      </EntityType>
+      <EntityType Name="SysViewFilterEntity">
+        <Key>
+          <PropertyRef Name="Id" />
+        </Key>
+        <Property Name="Id" Type="Edm.Guid" Nullable="false" />
+        <Property Name="DateCreated" Type="Edm.DateTimeOffset" />
+        <Property Name="DateModified" Type="Edm.DateTimeOffset" />
+        <Property Name="FiltersData" Type="Edm.String" />
+        <Property Name="Name" Type="Edm.String" />
+        <NavigationProperty Name="CustomInventories" Type="Collection(Intelex.SysCustomInventoryEntity)" Partner="ViewFilter" />
+        <NavigationProperty Name="InventoryBase" Type="Intelex.SysInventoryBaseEntity" Nullable="false" Partner="ViewFilters" />
+        <NavigationProperty Name="CreatedBy" Type="Intelex.SysEmployeeEntity" Nullable="false" />
+        <NavigationProperty Name="ModifiedBy" Type="Intelex.SysEmployeeEntity" Nullable="false" />
+        <NavigationProperty Name="Object" Type="Intelex.MetObjectEntity" Nullable="false" />
+        <NavigationProperty Name="DependentProperties" Type="Collection(Intelex.MetPropertyEntity)" />
+      </EntityType>
+      <EntityType Name="SysDatasetRelationEntity">
+        <Key>
+          <PropertyRef Name="Id" />
+        </Key>
+        <Property Name="Id" Type="Edm.Guid" Nullable="false" />
+        <NavigationProperty Name="DatasetId_" Type="Intelex.SysDatasetEntity" Nullable="false" Partner="DatasetId__" />
+        <NavigationProperty Name="RelatedDsId_" Type="Intelex.SysDatasetEntity" Nullable="false" Partner="RelatedDsId_" />
+      </EntityType>
+      <EntityType Name="SysObjectToDatasetMapEntity">
+        <Key>
+          <PropertyRef Name="Id" />
+        </Key>
+        <Property Name="Id" Type="Edm.Guid" Nullable="false" />
+        <NavigationProperty Name="Dataset" Type="Intelex.SysDatasetEntity" Nullable="false" Partner="ObjectToDatasets" />
+        <NavigationProperty Name="Object" Type="Intelex.MetObjectEntity" Nullable="false" />
+      </EntityType>
+      <EntityType Name="SysModuleGroupEntity">
+        <Key>
+          <PropertyRef Name="Id" />
+        </Key>
+        <Property Name="Id" Type="Edm.Guid" Nullable="false" />
+        <Property Name="DateCreated" Type="Edm.DateTimeOffset" />
+        <Property Name="DateModified" Type="Edm.DateTimeOffset" />
+        <Property Name="Description" Type="Edm.String" />
+        <Property Name="Index" Type="Edm.Int16" />
+        <Property Name="IsSystem" Type="Edm.Boolean" />
+        <Property Name="Name" Type="Edm.String" />
+        <NavigationProperty Name="Modules" Type="Collection(Intelex.SysModuleEntity)" Partner="Group" />
+        <NavigationProperty Name="CreatedBy" Type="Intelex.SysEmployeeEntity" Nullable="false" />
+        <NavigationProperty Name="ModifiedBy" Type="Intelex.SysEmployeeEntity" Nullable="false" />
+      </EntityType>
+      <EntityType Name="SysModuleTabEntity" Abstract="true">
+        <Key>
+          <PropertyRef Name="Id" />
+        </Key>
+        <Property Name="Id" Type="Edm.Guid" Nullable="false" />
+        <Property Name="DateCreated" Type="Edm.DateTimeOffset" />
+        <Property Name="DateModified" Type="Edm.DateTimeOffset" />
+        <Property Name="Caption" Type="Edm.String" />
+        <Property Name="Index" Type="Edm.Int16" />
+        <Property Name="IsMenuEnabled" Type="Edm.Boolean" />
+        <Property Name="IsMobileTab" Type="Edm.Boolean" />
+        <Property Name="TileIcon" Type="Edm.String" />
+        <Property Name="UrlCaption" Type="Edm.String" />
+        <NavigationProperty Name="Module" Type="Intelex.SysModuleEntity" Nullable="false" Partner="Tabs" />
+        <NavigationProperty Name="CreatedBy" Type="Intelex.SysEmployeeEntity" Nullable="false" />
+        <NavigationProperty Name="ModifiedBy" Type="Intelex.SysEmployeeEntity" Nullable="false" />
+      </EntityType>
+      <EntityType Name="NtfScheduleRecipientEntity">
+        <Key>
+          <PropertyRef Name="Id" />
+        </Key>
+        <Property Name="Id" Type="Edm.Guid" Nullable="false" />
+        <Property Name="DateCreated" Type="Edm.DateTimeOffset" />
+        <Property Name="DateModified" Type="Edm.DateTimeOffset" />
+        <Property Name="PeriodFrequency" Type="Enum.ScheduleFrequencyType" />
+        <Property Name="PeriodOccurrence" Type="Enum.ScheduleOccurrenceType" />
+        <Property Name="PeriodValue" Type="Edm.Int16" />
+        <Property Name="Recurrence" Type="Edm.String" />
+        <NavigationProperty Name="Schedule" Type="Intelex.NtfScheduleEntity" Nullable="false" Partner="Recipients" />
+        <NavigationProperty Name="CreatedBy" Type="Intelex.SysEmployeeEntity" Nullable="false" />
+        <NavigationProperty Name="ModifiedBy" Type="Intelex.SysEmployeeEntity" Nullable="false" />
+        <NavigationProperty Name="Template" Type="Intelex.NtfTemplateEntity" Nullable="false" />
+        <NavigationProperty Name="Recipients" Type="Collection(Intelex.SysSubjectEntity)" />
+      </EntityType>
+      <EntityType Name="MetRelationEntity">
+        <Key>
+          <PropertyRef Name="Id" />
+        </Key>
+        <Property Name="Id" Type="Edm.Guid" Nullable="false" />
+        <Property Name="Description" Type="Edm.String" />
+        <Property Name="HardDeleteRule" Type="Enum.HardDeleteRule" />
+        <Property Name="IsMaster" Type="Edm.Boolean" />
+        <Property Name="IsStatic" Type="Edm.Boolean" />
+        <Property Name="Name" Type="Edm.String" />
+        <Property Name="SoftDeleteRule" Type="Enum.SoftDeleteRule" />
+        <Property Name="Type" Type="Enum.RelationType" />
+        <NavigationProperty Name="ReferenceProperties" Type="Collection(Intelex.MetReferencePropertyEntity)" Partner="Relation" />
+        <NavigationProperty Name="EndObject" Type="Intelex.MetObjectEntity" Nullable="false" />
+        <NavigationProperty Name="StartObject" Type="Intelex.MetObjectEntity" Nullable="false" />
+      </EntityType>
+      <EntityType Name="UomUnitOfMeasureEntity">
+        <Key>
+          <PropertyRef Name="Id" />
+        </Key>
+        <Property Name="Id" Type="Edm.Guid" Nullable="false" />
+        <Property Name="Caption" Type="Edm.String" />
+        <Property Name="DefaultFactorExpression" Type="Edm.String" />
+        <Property Name="Description" Type="Edm.String" />
+        <Property Name="Factor" Type="Edm.Double" />
+        <Property Name="FactorExpression" Type="Edm.String" />
+        <Property Name="Notation" Type="Edm.String" />
+        <NavigationProperty Name="PropertiesUsingUnit" Type="Collection(Intelex.MetSimplePropertyEntity)" Partner="DefaultUnitOfMeasure" />
+      </EntityType>
+      <EntityType Name="SysModuleTabDashboardEntity" BaseType="Intelex.SysModuleTabEntity" />
+      <EntityType Name="SysModuleTabLegacyEntity" BaseType="Intelex.SysModuleTabEntity">
+        <Property Name="CustomHref" Type="Edm.String" />
+        <Property Name="FormParams" Type="Edm.String" />
+        <Property Name="HomePageDashboard" Type="Edm.Int16" />
+        <Property Name="Ifd" Type="Edm.String" />
+        <Property Name="IsIfdsecure" Type="Edm.Boolean" />
+        <Property Name="IsInventory" Type="Edm.Boolean" />
+        <Property Name="LegacyModuleId" Type="Edm.Int32" />
+        <Property Name="PermissionLevel" Type="Edm.Int32" />
+        <Property Name="PermissionSectionId" Type="Edm.Int32" />
+      </EntityType>
+      <EntityType Name="SysModuleTabAutogeneratedViewEntity" BaseType="Intelex.SysModuleTabEntity">
+        <Property Name="ViewMode" Type="Enum.ViewMode" />
+        <Property Name="ViewType" Type="Enum.ViewType" />
+        <NavigationProperty Name="Object" Type="Intelex.MetObjectEntity" Nullable="false" />
+      </EntityType>
+      <EntityType Name="SysModuleTabConfigurableViewEntity" BaseType="Intelex.SysModuleTabEntity">
+        <Property Name="ViewMode" Type="Enum.ViewMode" />
+        <NavigationProperty Name="ConfigurableView" Type="Intelex.SysConfigurableViewEntity" Nullable="false" />
+      </EntityType>
+      <EntityType Name="SysModuleTabReportEntity" BaseType="Intelex.SysModuleTabEntity" />
+      <EntityType Name="SysModuleTabLinkEntity" BaseType="Intelex.SysModuleTabEntity">
+        <Property Name="Link" Type="Edm.String" />
+      </EntityType>
+    </Schema>
+    <Schema Namespace="Enum" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+      <EnumType Name="DueDateType">
+        <Member Name="None" Value="0" />
+        <Member Name="Upcoming" Value="1" />
+        <Member Name="Overdue" Value="2" />
+        <Member Name="Due" Value="3" />
+      </EnumType>
+      <EnumType Name="WorkflowStatusType">
+        <Member Name="Open" Value="1" />
+        <Member Name="Completed" Value="2" />
+        <Member Name="Cancelled" Value="3" />
+        <Member Name="Delayed" Value="4" />
+        <Member Name="Disabled" Value="5" />
+      </EnumType>
+      <EnumType Name="DocumentAttachmentType">
+        <Member Name="File" Value="1" />
+        <Member Name="Web" Value="2" />
+        <Member Name="Server" Value="3" />
+      </EnumType>
+      <EnumType Name="DueDateLengthType">
+        <Member Name="Hours" Value="1" />
+        <Member Name="Days" Value="2" />
+        <Member Name="Weeks" Value="3" />
+        <Member Name="Months" Value="4" />
+        <Member Name="Years" Value="5" />
+      </EnumType>
+      <EnumType Name="RecipientType">
+        <Member Name="NamedRecipient" Value="1" />
+        <Member Name="PropertyExpression" Value="2" />
+        <Member Name="PropertyReference" Value="3" />
+        <Member Name="UserDefined" Value="4" />
+        <Member Name="Role" Value="5" />
+      </EnumType>
+      <EnumType Name="StageActionType">
+        <Member Name="NextStage" Value="1" />
+        <Member Name="Complete" Value="2" />
+      </EnumType>
+      <EnumType Name="TaskType">
+        <Member Name="Action" Value="1" />
+        <Member Name="FieldUpdate" Value="2" />
+        <Member Name="AddSubRecord" Value="3" />
+        <Member Name="Comment" Value="4" />
+        <Member Name="CompleteChildWorkflow" Value="5" />
+      </EnumType>
+      <EnumType Name="ViewType">
+        <Member Name="Detail" Value="0" />
+        <Member Name="Inventory" Value="1" />
+      </EnumType>
+      <EnumType Name="WorkflowTrackingType">
+        <Member Name="WorkflowStarted" Value="1" />
+        <Member Name="WorkflowCancelled" Value="2" />
+        <Member Name="WorkflowCompleted" Value="3" />
+        <Member Name="WorkflowActionExecuted" Value="4" />
+        <Member Name="WorkflowCommentAdded" Value="5" />
+        <Member Name="WorkflowScheduled" Value="6" />
+        <Member Name="WorkflowDisabled" Value="7" />
+      </EnumType>
+      <EnumType Name="DetailDisplayField">
+        <Member Name="None" Value="0" />
+        <Member Name="Label" Value="1" />
+        <Member Name="ReadOnlyTextBox" Value="2" />
+        <Member Name="ReadOnlyCheckBox" Value="3" />
+        <Member Name="ReadOnlyRadioButton" Value="4" />
+        <Member Name="ReadOnlyDropDown" Value="5" />
+        <Member Name="ReadOnlyRadioGroup" Value="6" />
+        <Member Name="ProgressBar" Value="7" />
+        <Member Name="Link" Value="8" />
+        <Member Name="TextBox" Value="9" />
+        <Member Name="IncrementTextBox" Value="10" />
+        <Member Name="CheckBox" Value="11" />
+        <Member Name="RadioButton" Value="12" />
+        <Member Name="DropDown" Value="13" />
+        <Member Name="RadioGroup" Value="14" />
+        <Member Name="Calendar" Value="15" />
+        <Member Name="Slider" Value="16" />
+        <Member Name="Labels" Value="17" />
+        <Member Name="Links" Value="18" />
+        <Member Name="ReadOnlyCheckBoxGroup" Value="19" />
+        <Member Name="CheckBoxGroup" Value="20" />
+        <Member Name="GridSection" Value="21" />
+        <Member Name="GridSubSection" Value="22" />
+        <Member Name="Recurrence" Value="23" />
+        <Member Name="EntitySelector" Value="24" />
+        <Member Name="HierarchySelector" Value="25" />
+        <Member Name="Icon" Value="26" />
+      </EnumType>
+      <EnumType Name="InventoryDisplayField">
+        <Member Name="None" Value="0" />
+        <Member Name="Label" Value="1" />
+        <Member Name="ReadOnlyCheckBox" Value="2" />
+        <Member Name="Link" Value="3" />
+        <Member Name="ProgressBar" Value="4" />
+      </EnumType>
+      <EnumType Name="ConcurrencyType">
+        <Member Name="Optimistic" Value="0" />
+        <Member Name="Pessimistic" Value="1" />
+      </EnumType>
+      <EnumType Name="LocationFilterType">
+        <Member Name="None" Value="0" />
+        <Member Name="ActiveLocation" Value="1" />
+        <Member Name="RollUp" Value="2" />
+        <Member Name="TrickleDown" Value="3" />
+        <Member Name="RollUpAndTrickleDown" Value="4" />
+        <Member Name="ViewAll" Value="5" />
+      </EnumType>
+      <EnumType Name="MergeType">
+        <Member Name="AutoMerge" Value="0" />
+        <Member Name="ManuallyMerge" Value="1" />
+      </EnumType>
+      <EnumType Name="TimeoutType">
+        <Member Name="Never" Value="0" />
+        <Member Name="Session" Value="1" />
+        <Member Name="Absolute" Value="2" />
+      </EnumType>
+      <EnumType Name="FiscalYearNamingType">
+        <Member Name="FirstMonth" Value="1" />
+        <Member Name="LastMonth" Value="2" />
+      </EnumType>
+      <EnumType Name="SystemSubjectType">
+        <Member Name="Creator" Value="0" />
+        <Member Name="PersonLastChangedTheRecord" Value="1" />
+        <Member Name="PersonResponsible" Value="2" />
+      </EnumType>
+      <EnumType Name="SystemGroupType">
+        <Member Name="Administrators" Value="0" />
+        <Member Name="Everyone" Value="1" />
+      </EnumType>
+      <EnumType Name="SqlDbTypes">
+        <Member Name="BigInt" Value="0" />
+        <Member Name="Bit" Value="2" />
+        <Member Name="Char" Value="3" />
+        <Member Name="DateTime" Value="4" />
+        <Member Name="Decimal" Value="5" />
+        <Member Name="Float" Value="6" />
+        <Member Name="Image" Value="7" />
+        <Member Name="Int" Value="8" />
+        <Member Name="Money" Value="9" />
+        <Member Name="NChar" Value="10" />
+        <Member Name="NText" Value="11" />
+        <Member Name="NVarChar" Value="12" />
+        <Member Name="Real" Value="13" />
+        <Member Name="UniqueIdentifier" Value="14" />
+        <Member Name="SmallInt" Value="16" />
+        <Member Name="Text" Value="18" />
+        <Member Name="Timestamp" Value="19" />
+        <Member Name="TinyInt" Value="20" />
+        <Member Name="VarBinary" Value="21" />
+        <Member Name="VarChar" Value="22" />
+        <Member Name="SqlVariant" Value="23" />
+        <Member Name="Xml" Value="25" />
+        <Member Name="Date" Value="31" />
+        <Member Name="Time" Value="32" />
+      </EnumType>
+      <EnumType Name="HierarchyOrderType">
+        <Member Name="AlphabeticalOrder" Value="0" />
+        <Member Name="UserDefinedOrder" Value="1" />
+      </EnumType>
+      <EnumType Name="HierarchySelectionMode">
+        <Member Name="SelectedFolderOnly" Value="0" />
+        <Member Name="FolderAndChildren" Value="1" />
+        <Member Name="FolderAndParents" Value="2" />
+      </EnumType>
+      <EnumType Name="ActionRequiredItemType">
+        <Member Name="UpdateField" Value="1" />
+        <Member Name="AddSubRecord" Value="2" />
+        <Member Name="AddComment" Value="3" />
+        <Member Name="UpdateReferenceField" Value="4" />
+        <Member Name="CompleteChildWorkflows" Value="5" />
+        <Member Name="AnswerMandatoryQuestions" Value="6" />
+      </EnumType>
+      <EnumType Name="ProfileType">
+        <Member Name="Web" Value="0" />
+        <Member Name="Mobile" Value="1" />
+      </EnumType>
+      <EnumType Name="ThemeType">
+        <Member Name="Default" Value="0" />
+        <Member Name="Classic" Value="1" />
+        <Member Name="Raven" Value="2" />
+      </EnumType>
+      <EnumType Name="RescheduleStrategyType">
+        <Member Name="None" Value="0" />
+        <Member Name="ExistingScheduleDateAndFrequency" Value="1" />
+        <Member Name="TodaysDateAndFrequency" Value="2" />
+        <Member Name="DateCompletedFieldAndFrequency" Value="3" />
+      </EnumType>
+      <EnumType Name="WorkflowScheduleType">
+        <Member Name="None" Value="0" />
+        <Member Name="Restart" Value="1" />
+        <Member Name="CloneAndCopy" Value="2" />
+        <Member Name="GenerateAllTasks" Value="3" />
+      </EnumType>
+      <EnumType Name="ObjectActionType">
+        <Member Name="None" Value="0" />
+        <Member Name="Create" Value="1" />
+        <Member Name="Update" Value="2" />
+        <Member Name="Delete" Value="4" />
+        <Member Name="HardDelete" Value="8" />
+        <Member Name="EventService" Value="16" />
+      </EnumType>
+      <EnumType Name="AuditType">
+        <Member Name="Success" Value="0" />
+        <Member Name="Fail" Value="1" />
+      </EnumType>
+      <EnumType Name="LinkType">
+        <Member Name="Application" Value="0" />
+        <Member Name="View" Value="1" />
+        <Member Name="Url" Value="2" />
+        <Member Name="Action" Value="3" />
+      </EnumType>
+      <EnumType Name="FieldFilterType">
+        <Member Name="None" Value="0" />
+        <Member Name="ObjectFilter" Value="1" />
+        <Member Name="FieldFilter" Value="2" />
+      </EnumType>
+      <EnumType Name="ScheduleFrequencyType">
+        <Member Name="Day" Value="1" />
+      </EnumType>
+      <EnumType Name="ScheduleOccurrenceType">
+        <Member Name="After" Value="1" />
+        <Member Name="Before" Value="-1" />
+      </EnumType>
+      <EnumType Name="HardDeleteRule">
+        <Member Name="None" Value="0" />
+        <Member Name="SetNull" Value="1" />
+        <Member Name="Delete" Value="2" />
+      </EnumType>
+      <EnumType Name="SoftDeleteRule">
+        <Member Name="None" Value="0" />
+        <Member Name="Archive" Value="1" />
+      </EnumType>
+      <EnumType Name="RelationType">
+        <Member Name="OneToMany" Value="0" />
+        <Member Name="OneToOne" Value="1" />
+        <Member Name="ManyToOne" Value="2" />
+        <Member Name="ManyToMany" Value="3" />
+      </EnumType>
+      <EnumType Name="ViewMode">
+        <Member Name="View" Value="2" />
+        <Member Name="Edit" Value="4" />
+        <Member Name="Create" Value="8" />
+        <Member Name="List" Value="16" />
+        <Member Name="MassUpdate" Value="32" />
+        <Member Name="Modify" Value="44" />
+        <Member Name="Detail" Value="46" />
+        <Member Name="All" Value="62" />
+      </EnumType>
+    </Schema>
+    <Schema Namespace="Action" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+      <Action Name="ExecuteStageAction" IsBound="true">
+        <Parameter Name="bindingParameter" Type="Intelex.SysWorkflowStageActionEntity" Nullable="false" />
+        <ReturnType Type="Edm.String" Nullable="false" />
+      </Action>
+    </Schema>
+  </edmx:DataServices>
+</edmx:Edmx>
